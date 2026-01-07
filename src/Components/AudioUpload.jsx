@@ -91,13 +91,15 @@ const AudioUpload = ({ onFileSelect, onConvert, isConverting }) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col p-6 bg-gradient-to-br from-white to-purple-50 rounded-2xl shadow-2xl border border-purple-100 transition-all duration-300 hover:shadow-purple-200">
+    <div className="w-full h-full flex flex-col p-6 bg-gradient-to-br from-white to-yellow-50 rounded-2xl shadow-2xl border border-yellow-100 transition-all duration-300 hover:shadow-yellow-200">
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-3">
-          <div className="p-2 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg shadow-lg">
+          <div className="p-2 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg shadow-lg">
             <Upload className="h-6 w-6 text-white" />
           </div>
-          <h2 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Upload Audio/Video</h2>
+          <h2 className="text-2xl font-bold bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text text-transparent">
+            Upload Audio/Video
+          </h2>
         </div>
         <p className="text-gray-600 text-sm ml-14">Upload your audio or video file to convert to sign language</p>
       </div>
@@ -107,9 +109,9 @@ const AudioUpload = ({ onFileSelect, onConvert, isConverting }) => {
         <div
           className={`relative border-3 border-dashed rounded-2xl p-8 transition-all duration-300 flex-1 flex flex-col items-center justify-center transform ${
             dragActive
-              ? 'border-purple-500 bg-gradient-to-br from-purple-50 to-pink-50 scale-105 shadow-xl'
-              : 'border-purple-300 hover:border-purple-400 hover:shadow-lg'
-          } ${selectedFile ? 'bg-gradient-to-br from-green-50 to-emerald-50' : 'bg-white hover:bg-gradient-to-br hover:from-purple-50 hover:to-pink-50'}`}
+              ? 'border-yellow-500 bg-gradient-to-br from-yellow-50 to-yellow-100 scale-105 shadow-xl'
+              : 'border-yellow-300 hover:border-yellow-400 hover:shadow-lg'
+          } ${selectedFile ? 'bg-gradient-to-br from-green-50 to-emerald-50' : 'bg-white hover:bg-gradient-to-br hover:from-yellow-50 hover:to-yellow-100'}`}
           onDragEnter={handleDrag}
           onDragLeave={handleDrag}
           onDragOver={handleDrag}
@@ -117,15 +119,19 @@ const AudioUpload = ({ onFileSelect, onConvert, isConverting }) => {
         >
           {!selectedFile ? (
             <div className="text-center">
-              <div className="mb-4 animate-bounce">
-                <div className="mx-auto w-20 h-20 bg-gradient-to-br from-purple-400 via-pink-400 to-red-400 rounded-full flex items-center justify-center shadow-lg">
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                className="mb-4 animate-bounce cursor-pointer hover:scale-110 transition-transform duration-200 focus:outline-none focus:ring-4 focus:ring-yellow-300 rounded-full"
+                type="button"
+              >
+                <div className="mx-auto w-20 h-20 bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-2xl transition-shadow duration-200">
                   <Upload className="h-10 w-10 text-white" />
                 </div>
-              </div>
+              </button>
               <div className="mb-4">
                 <label
                   htmlFor="file-upload"
-                  className="cursor-pointer text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text hover:from-purple-700 hover:to-pink-700 font-bold text-lg transition-all duration-200"
+                  className="cursor-pointer text-transparent bg-gradient-to-r from-yellow-600 to-yellow-700 bg-clip-text hover:from-yellow-700 hover:to-yellow-800 font-bold text-lg transition-all duration-200"
                 >
                   Click to upload
                 </label>
@@ -171,7 +177,7 @@ const AudioUpload = ({ onFileSelect, onConvert, isConverting }) => {
               <div className="mt-6 text-center">
                 <button
                   onClick={() => fileInputRef.current?.click()}
-                  className="text-sm font-bold text-transparent bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                  className="text-sm font-bold text-yellow-600 hover:text-yellow-700 transition-all duration-200"
                   disabled={isConverting}
                 >
                   Choose a different file
@@ -203,7 +209,7 @@ const AudioUpload = ({ onFileSelect, onConvert, isConverting }) => {
           className={`mt-6 w-full py-4 px-6 rounded-xl font-bold text-white text-lg transition-all duration-300 flex items-center justify-center shadow-lg transform ${
             !selectedFile || isConverting
               ? 'bg-gray-300 cursor-not-allowed'
-              : 'bg-gradient-to-r from-purple-600 via-pink-600 to-red-500 hover:from-purple-700 hover:via-pink-700 hover:to-red-600 hover:scale-105 hover:shadow-2xl active:scale-95'
+              : 'bg-gradient-to-r from-yellow-600 via-yellow-700 to-yellow-800 hover:from-yellow-700 hover:via-yellow-800 hover:to-yellow-900 hover:scale-105 hover:shadow-2xl active:scale-95'
           }`}
         >
           {isConverting ? (
@@ -221,17 +227,17 @@ const AudioUpload = ({ onFileSelect, onConvert, isConverting }) => {
         </button>
 
         {/* File Info */}
-        <div className="mt-6 p-5 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-xl border-2 border-purple-200 shadow-md">
-          <h3 className="text-sm font-bold text-transparent bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text mb-3">Supported Formats:</h3>
+        <div className="mt-6 p-5 bg-yellow-50 rounded-xl border-2 border-yellow-200 shadow-sm">
+          <h3 className="text-sm font-bold text-yellow-900 mb-3">Supported Formats:</h3>
           <ul className="text-sm text-gray-700 space-y-2 font-medium">
             <li className="flex items-center">
-              <span className="text-green-500 mr-2">🎵</span> Audio: MP3, WAV
+              <span className="text-yellow-500 mr-2">🎵</span> Audio: MP3, WAV
             </li>
             <li className="flex items-center">
-              <span className="text-blue-500 mr-2">🎬</span> Video: MP4
+              <span className="text-yellow-500 mr-2">🎬</span> Video: MP4
             </li>
             <li className="flex items-center">
-              <span className="text-purple-500 mr-2">📦</span> Maximum file size: 50MB
+              <span className="text-yellow-500 mr-2">📦</span> Maximum file size: 50MB
             </li>
           </ul>
         </div>

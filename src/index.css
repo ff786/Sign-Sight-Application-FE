@@ -4,9 +4,73 @@
   /* You can add custom theme values here if needed */
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f6dc5d;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f6dc5d;
+}
+
+/* Custom slider styles */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f6dc5d;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(246, 221, 59, 0.5);
+  transition: all 0.2s;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background: #f6dc5d;
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(246, 221, 59, 0.5);
+}
+
+.slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f6dc5d;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(246, 221, 59, 0.5);
+  transition: all 0.2s;
+}
+
+.slider::-moz-range-thumb:hover {
+  background: #f6dc5d;
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(246, 221, 59, 0.5);
+}
+

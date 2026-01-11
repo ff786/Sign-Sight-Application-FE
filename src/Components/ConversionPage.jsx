@@ -2,7 +2,7 @@ import { useState } from 'react';
 import AudioUpload from './AudioUpload';
 import SignLanguageDisplay from './SignLanguageDisplay';
 
-// Import the actual sign language videos
+
 import nandriVideo from '../assets/nandri.mp4';
 import urakkamVideo from '../assets/urakkam.mp4';
 import logoSignSight from '../assets/logo-sign-sight.webp';
@@ -18,7 +18,6 @@ const ConversionPage = () => {
     // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 2000));
 
-    // Map audio file names to corresponding sign language videos
     const fileName = audioFile.name.toLowerCase();
     let videoUrl = null;
 
@@ -27,7 +26,6 @@ const ConversionPage = () => {
     } else if (fileName.includes('urakkam')) {
       videoUrl = urakkamVideo;
     } else {
-      // For other files, randomly select one of the available videos
       videoUrl = Math.random() > 0.5 ? nandriVideo : urakkamVideo;
     }
 

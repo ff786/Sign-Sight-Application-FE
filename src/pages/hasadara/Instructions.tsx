@@ -1,8 +1,8 @@
-import PrimaryButton from "../../components/hasadara/PrimaryButton";
-import EmotionTile from "../../components/hasadara/EmotionTile";
+import PrimaryButton from "../../Components/hasadara/PrimaryButton";
+import EmotionTile from "../../Components/hasadara/EmotionTile";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Navbar from "../../components/hasadara/Navbar";
+import Navbar from "../../Components/hasadara/Navbar";
 
 export default function Instructions() {
   const nav = useNavigate();

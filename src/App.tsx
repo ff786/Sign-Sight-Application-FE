@@ -1,9 +1,18 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
+import UnifiedNavbar from './Components/common/UnifiedNavbar'
+import Footer from './Components/common/Footer'
+import ProtectedRoute from './Components/common/ProtectedRoute'
+
+// Pages
+import LandingPage from './pages/LandingPage'
+import UnifiedLoginPage from './pages/auth/UnifiedLoginPage'
+import UnifiedSignupPage from './pages/auth/UnifiedSignupPage'
+import ProfilePage from './pages/ProfilePage'
 import ConversionPage from './Components/audio-sign/ConversionPage'
 import HomePage from './Components/HomePage/HomePage'
-import Navbar from './Components/common/Navbar'
-import Footer from './Components/common/Footer'
 
+// Legacy imports
 import MentorLogin from "./pages/kaveesha/MentorLogin";
 import MentorSignUp from "./pages/kaveesha/MentorSignUp";
 import StudentLogin from "./pages/kaveesha/StudentLogin";
@@ -12,56 +21,108 @@ import StudentLearningLanding from "./pages/kaveesha/StudentLanding";
 import QuizEngine from "./pages/kaveesha/learn/QuizEngine";
 import Results from "./pages/kaveesha/ResultPage";
 import LessonsHome from "./pages/kaveesha/lessons/LessonsHome";
-
 import LessonPlayer from "./pages/kaveesha/lessons/LessonsPlayer";
 import MentorDashboard from "./mentor/MentorDashboard";
 import AdminLogin from "./pages/kaveesha/AdminLogin";
 import AdminDashboard from "./pages/kaveesha/AdminDashboard";
 import StudentAttemptsPage from "./pages/kaveesha/StudentAttemptsPage";
-
 import Emotion_landing from "./pages/hasadara/Emotion_Landing";
 import Instructions from "./pages/hasadara/Instructions";
 import EmotionFlow from "./pages/hasadara/EmotionFlow";
 import Result from "./pages/hasadara/Result";
 
-
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/Home" element={<HomePage />} />
-        <Route path="/convert" element={<ConversionPage />} />
-        <Route path="*" element={<HomePage />} />
-        <Route path="/" element={<StudentLogin />} />
-        <Route path="/student/login" element={<StudentLogin />} />
-        <Route path="/student/signup" element={<StudentSignUp />} />
-        <Route path="/student/landing" element={<StudentLearningLanding />} />
-        <Route path="/student/attempts" element={<StudentAttemptsPage />} />
-        <Route path="/mentor/login" element={<MentorLogin />} />
-        <Route path="/mentor/signup" element={<MentorSignUp />} />
-        <Route path="/results" element={<Results />} />
+    <AuthProvider>
+      <BrowserRouter>
+        <UnifiedNavbar />
+        <main className="min-h-screen">
+          <Routes>
+            {/* Main Landing & Auth - Public */}
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/login" element={<UnifiedLoginPage />} />
+            <Route path="/signup" element={<UnifiedSignupPage />} />
+            <Route path="/profile" element={<ProfilePage />} />
 
-        <Route path="/learn/:level" element={<QuizEngine />} />
+            {/* Mentor Routes */}
+            <Route path="/mentor/login" element={<MentorLogin />} />
+            <Route path="/mentor/signup" element={<MentorSignUp />} />
 
-        <Route path="/lessons" element={<LessonsHome />} />
+            {/* Admin Routes */}
+            <Route path="/admin/login" element={<AdminLogin />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
 
-        <Route path="/lessons" element={<LessonsHome />} />
-        <Route path="/lessons/:category/:item" element={<LessonPlayer />} />
-        <Route path="/mentorDash" element={<MentorDashboard />} />
+            {/* Primary Features - No auth required for viewing */}
+            <Route path="/convert" element={<ConversionPage />} />
+            <Route path="/emotion_landing" element={<Emotion_landing />} />
+            <Route path="/detection" element={<div className="p-8 text-center text-2xl">Live Sign Detection Coming Soon</div>} />
 
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            {/* Protected Features - Require auth */}
+            <Route
+              path="/lessons"
+              element={
+                <ProtectedRoute>
+                  <LessonsHome />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/lessons/:category/:item"
+              element={
+                <ProtectedRoute>
+                  <LessonPlayer />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/learn/:level"
+              element={
+                <ProtectedRoute>
+                  <QuizEngine />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/landing"
+              element={
+                <ProtectedRoute>
+                  <StudentLearningLanding />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/attempts"
+              element={
+                <ProtectedRoute>
+                  <StudentAttemptsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/mentorDash"
+              element={
+                <ProtectedRoute requiredRole="mentor">
+                  <MentorDashboard />
+                </ProtectedRoute>
+              }
+            />
 
-          <Route path="/emotion_landing" element={<Emotion_landing />} />
-          <Route path="/instructions" element={<Instructions />} />
-          <Route path="/emotion" element={<EmotionFlow />} />
-          <Route path="/result" element={<Result />} />
-        {/* <Route path="/lessons/food/:food" element={<FoodPlayer />} />
-        <Route path="/lessons/numbers/:number" element={<NumberViewer />} /> */}
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+            {/* Legacy Routes */}
+            <Route path="/Home" element={<HomePage />} />
+            <Route path="/student/login" element={<StudentLogin />} />
+            <Route path="/student/signup" element={<StudentSignUp />} />
+            <Route path="/results" element={<Results />} />
+            <Route path="/instructions" element={<Instructions />} />
+            <Route path="/emotion" element={<EmotionFlow />} />
+            <Route path="/result" element={<Result />} />
+
+            {/* Catch all */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 

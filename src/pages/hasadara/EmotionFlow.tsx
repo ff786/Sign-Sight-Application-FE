@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
-import Countdown from "../../components/hasadara/Countdown";
-import ProgressIndicator from "../../components/hasadara/ProgressIndicator";
-import CameraBubble from "../../components/hasadara/CameraBubble";
+import Countdown from "../../Components/hasadara/Countdown";
+import ProgressIndicator from "../../Components/hasadara/ProgressIndicator";
+import CameraBubble from "../../Components/hasadara/CameraBubble";
 
 import { useCamera } from "../../hooks/hasadara/useCamera";
 import {

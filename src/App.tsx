@@ -3,6 +3,22 @@ import ConversionPage from './Components/audio-sign/ConversionPage'
 import HomePage from './Components/HomePage/HomePage'
 import Navbar from './Components/common/Navbar'
 import Footer from './Components/common/Footer'
+
+import MentorLogin from "./pages/kaveesha/MentorLogin";
+import MentorSignUp from "./pages/kaveesha/MentorSignUp";
+import StudentLogin from "./pages/kaveesha/StudentLogin";
+import StudentSignUp from "./pages/kaveesha/StudentSignUp";
+import StudentLearningLanding from "./pages/kaveesha/StudentLanding";
+import QuizEngine from "./pages/kaveesha/learn/QuizEngine";
+import Results from "./pages/kaveesha/ResultPage";
+import LessonsHome from "./pages/kaveesha/lessons/LessonsHome";
+
+import LessonPlayer from "./pages/kaveesha/lessons/LessonsPlayer";
+import MentorDashboard from "./mentor/MentorDashboard";
+import AdminLogin from "./pages/kaveesha/AdminLogin";
+import AdminDashboard from "./pages/kaveesha/AdminDashboard";
+import StudentAttemptsPage from "./pages/kaveesha/StudentAttemptsPage";
+
 import './App.css'
 
 function App() {
@@ -13,10 +29,32 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/convert" element={<ConversionPage />} />
         <Route path="*" element={<HomePage />} />
+        <Route path="/" element={<StudentLogin />} />
+        <Route path="/student/login" element={<StudentLogin />} />
+        <Route path="/student/signup" element={<StudentSignUp />} />
+        <Route path="/student/landing" element={<StudentLearningLanding />} />
+        <Route path="/student/attempts" element={<StudentAttemptsPage />} />
+        <Route path="/mentor/login" element={<MentorLogin />} />
+        <Route path="/mentor/signup" element={<MentorSignUp />} />
+        <Route path="/results" element={<Results />} />
+
+        <Route path="/learn/:level" element={<QuizEngine />} />
+
+        <Route path="/lessons" element={<LessonsHome />} />
+
+        <Route path="/lessons" element={<LessonsHome />} />
+        <Route path="/lessons/:category/:item" element={<LessonPlayer />} />
+        <Route path="/mentorDash" element={<MentorDashboard />} />
+
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route path="/admin/dashboard" element={<AdminDashboard />} />
+
+        {/* <Route path="/lessons/food/:food" element={<FoodPlayer />} />
+        <Route path="/lessons/numbers/:number" element={<NumberViewer />} /> */}
       </Routes>
       <Footer />
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

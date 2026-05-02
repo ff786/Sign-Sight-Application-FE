@@ -1,0 +1,2411 @@
+{
+  "level": "Basic",
+  "categories": {
+    "category_1": [
+      {
+        "id": "B-C1-1",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'அ'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/a.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/au.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/i.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/kau.jpg"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-2",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ஔ'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/i.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/au.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/kau.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/na.jpg"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-3",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'இ'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/kau.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/i.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/ngu.jpg"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-4",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'கா'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/kau.jpg"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-5",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ந'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/tai.jpg"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-6",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ங'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/tai.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/te.jpg"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-7",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ஒ'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/tai.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/ti.jpg"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-8",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தை'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/tai.jpg"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-9",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தெ'",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/2.png"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-10",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தி'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/2.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/3.png"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-11",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'து'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/2.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/4.png"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-12",
+        "area": "numbers",
+        "question": "Select the sign for number 2.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/4.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/5.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/2.png"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-13",
+        "area": "numbers",
+        "question": "Select the sign for number 3.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/4.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/5.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/6.png"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-14",
+        "area": "numbers",
+        "question": "Select the sign for number 4.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/5.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/4.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/6.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/7.png"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-15",
+        "area": "numbers",
+        "question": "Select the sign for number 5.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/6.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/7.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/5.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/8.png"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-16",
+        "area": "numbers",
+        "question": "Select the sign for number 6.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/7.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/8.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/9.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/6.png"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-17",
+        "area": "numbers",
+        "question": "Select the sign for number 7.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/7.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/8.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/9.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/10.png"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-18",
+        "area": "numbers",
+        "question": "Select the sign for number 8.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/9.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/8.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/10.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/a.jpg"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-19",
+        "area": "numbers",
+        "question": "Select the sign for number 9.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/10.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/a.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/9.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/au.jpg"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-20",
+        "area": "numbers",
+        "question": "Select the sign for number 10.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/a.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/au.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/i.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/10.png"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-21",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'அ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/a.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/i.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/kau.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/na.jpg"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-22",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ஔ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/kau.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/au.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/ngu.jpg"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-23",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'இ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/i.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/o.jpg"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-24",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'கா'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/tai.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/kau.jpg"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-25",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ந'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/tai.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/te.jpg"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-26",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ங'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/tai.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/ti.jpg"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-27",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ஒ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/tu.jpg"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-28",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தை'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/2.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/tai.jpg"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-29",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தெ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/2.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/3.png"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-30",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தி'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/2.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/4.png"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-31",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'து'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/4.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/5.png"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-32",
+        "area": "numbers",
+        "question": "Select the sign for number 2.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/4.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/5.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/6.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/2.png"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-33",
+        "area": "numbers",
+        "question": "Select the sign for number 3.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/5.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/6.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/7.png"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-34",
+        "area": "numbers",
+        "question": "Select the sign for number 4.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/6.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/4.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/7.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/8.png"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-35",
+        "area": "numbers",
+        "question": "Select the sign for number 5.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/7.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/8.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/5.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/9.png"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-36",
+        "area": "numbers",
+        "question": "Select the sign for number 6.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/8.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/9.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/10.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/6.png"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-37",
+        "area": "numbers",
+        "question": "Select the sign for number 7.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/7.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/9.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/10.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/a.jpg"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-38",
+        "area": "numbers",
+        "question": "Select the sign for number 8.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/10.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/8.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/a.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/au.jpg"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-39",
+        "area": "numbers",
+        "question": "Select the sign for number 9.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/a.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/au.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/9.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/i.jpg"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-40",
+        "area": "numbers",
+        "question": "Select the sign for number 10.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/au.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/i.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/kau.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/10.png"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-41",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'அ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/a.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/kau.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/ngu.jpg"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-42",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ஔ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/au.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/o.jpg"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-43",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'இ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/i.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/tai.jpg"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-44",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'கா'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/tai.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/kau.jpg"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-45",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ந'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/na.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/tai.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/ti.jpg"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-46",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ங'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ngu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/tu.jpg"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C1-47",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'ஒ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/o.jpg"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/2.png"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C1-48",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தை'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/tu.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/2.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/tai.jpg"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C1-49",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தெ'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/te.jpg"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/2.png"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/4.png"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C1-50",
+        "area": "alphabet",
+        "question": "Select the sign for Tamil letter 'தி'.",
+        "options": [
+          {
+            "id": "A",
+            "image": "/images/signs/3.png"
+          },
+          {
+            "id": "B",
+            "image": "/images/signs/ti.jpg"
+          },
+          {
+            "id": "C",
+            "image": "/images/signs/4.png"
+          },
+          {
+            "id": "D",
+            "image": "/images/signs/5.png"
+          }
+        ],
+        "correct_answer": "B"
+      }
+    ],
+    "category_2": [
+      {
+        "id": "B-C2-1",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Angry\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Aunty.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Angry.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Father.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Mother.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-2",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Happy\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Father.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Mother.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Happy.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Friend.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-3",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Sad\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Mother.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Friend.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Sad.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-4",
+        "area": "family",
+        "question": "Which video shows the sign for \"Aunty\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Aunty.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Friend.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/My.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-5",
+        "area": "family",
+        "question": "Which video shows the sign for \"Father\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Father.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Consumer.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-6",
+        "area": "family",
+        "question": "Which video shows the sign for \"Mother\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Mother.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Weakness.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-7",
+        "area": "family",
+        "question": "Which video shows the sign for \"Friend\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Weakness.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Friend.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-8",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Good\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Weakness.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Black.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-9",
+        "area": "objects",
+        "question": "Which video shows the sign for \"My\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/when.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-10",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Consumer\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-11",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Weakness\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/How well do you sign.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Weakness.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-12",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Red\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/How well do you sign.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/For School.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-13",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Black\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/How well do you sign.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/For School.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/where are you from.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-14",
+        "area": "actions",
+        "question": "Which video shows the sign for \"When\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/For School.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/where are you from.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Washington.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-15",
+        "area": "actions",
+        "question": "Which video shows the sign for \"When can I learn to sign?\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/where are you from.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Washington.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/He wants an animal that has.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-16",
+        "area": "actions",
+        "question": "Which video shows the sign for \"How well do you sign?\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/How well do you sign.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Washington.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/He wants an animal that has.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Angry.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-17",
+        "area": "actions",
+        "question": "Which video shows the sign for \"For School\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/He wants an animal that has.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/For School.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Angry.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Happy.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-18",
+        "area": "actions",
+        "question": "Which video shows the sign for \"Where are you from?\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Angry.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Happy.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/where are you from.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Sad.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-19",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Washington\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Happy.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Sad.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Aunty.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Washington.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-20",
+        "area": "objects",
+        "question": "Which video shows the sign for \"He wants an animal that has\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/He wants an animal that has.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Sad.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Aunty.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Father.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-21",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Angry\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Father.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Angry.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Mother.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Friend.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-22",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Happy\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Mother.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Friend.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Happy.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Good.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-23",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Sad\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Friend.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Sad.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-24",
+        "area": "family",
+        "question": "Which video shows the sign for \"Aunty\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Aunty.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Consumer.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-25",
+        "area": "family",
+        "question": "Which video shows the sign for \"Father\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Father.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Weakness.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-26",
+        "area": "family",
+        "question": "Which video shows the sign for \"Mother\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Weakness.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Mother.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Red.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-27",
+        "area": "family",
+        "question": "Which video shows the sign for \"Friend\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Weakness.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Friend.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-28",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Good\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/when.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-29",
+        "area": "objects",
+        "question": "Which video shows the sign for \"My\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-30",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Consumer\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/How well do you sign.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-31",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Weakness\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/How well do you sign.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/For School.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Weakness.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-32",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Red\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/How well do you sign.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/For School.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/where are you from.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-33",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Black\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/For School.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/where are you from.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Washington.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-34",
+        "area": "actions",
+        "question": "Which video shows the sign for \"When\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/where are you from.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Washington.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/He wants an animal that has.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-35",
+        "area": "actions",
+        "question": "Which video shows the sign for \"When can I learn to sign?\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Washington.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/He wants an animal that has.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Angry.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-36",
+        "area": "actions",
+        "question": "Which video shows the sign for \"How well do you sign?\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/How well do you sign.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/He wants an animal that has.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Angry.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Happy.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-37",
+        "area": "actions",
+        "question": "Which video shows the sign for \"For School\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Angry.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/For School.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Happy.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Sad.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-38",
+        "area": "actions",
+        "question": "Which video shows the sign for \"Where are you from?\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Happy.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Sad.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/where are you from.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Aunty.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-39",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Washington\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Sad.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Aunty.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Father.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Washington.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-40",
+        "area": "objects",
+        "question": "Which video shows the sign for \"He wants an animal that has\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/He wants an animal that has.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Aunty.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Father.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Mother.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-41",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Angry\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Mother.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Angry.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Friend.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Good.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-42",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Happy\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Friend.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Happy.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/My.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-43",
+        "area": "emotions",
+        "question": "Which video shows the sign for \"Sad\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Sad.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-44",
+        "area": "family",
+        "question": "Which video shows the sign for \"Aunty\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Aunty.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Weakness.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-45",
+        "area": "family",
+        "question": "Which video shows the sign for \"Father\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Father.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Weakness.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Red.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-46",
+        "area": "family",
+        "question": "Which video shows the sign for \"Mother\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Weakness.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Mother.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Black.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "B-C2-47",
+        "area": "family",
+        "question": "Which video shows the sign for \"Friend\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Red.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/Friend.mp4"
+          }
+        ],
+        "correct_answer": "D"
+      },
+      {
+        "id": "B-C2-48",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Good\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/Good.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/Black.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "B-C2-49",
+        "area": "objects",
+        "question": "Which video shows the sign for \"My\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/when.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/My.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/How well do you sign.mp4"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "B-C2-50",
+        "area": "objects",
+        "question": "Which video shows the sign for \"Consumer\"?",
+        "options": [
+          {
+            "id": "A",
+            "video": "/images/signs/When can I learn to sign.mp4"
+          },
+          {
+            "id": "B",
+            "video": "/images/signs/How well do you sign.mp4"
+          },
+          {
+            "id": "C",
+            "video": "/images/signs/Consumer.mp4"
+          },
+          {
+            "id": "D",
+            "video": "/images/signs/For School.mp4"
+          }
+        ],
+        "correct_answer": "C"
+      }
+    ],
+    "category_3": [],
+    "category_4": []
+  }
+}

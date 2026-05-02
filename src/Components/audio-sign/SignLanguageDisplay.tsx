@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, type ChangeEvent } from 'react';
 import { Play, Pause, RotateCcw, Volume2, VolumeX } from 'lucide-react';
 
 interface SignLanguageDisplayProps {
@@ -30,7 +30,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
       if (saved === 'small' || saved === 'medium' || saved === 'large') {
         setDisplaySize(saved);
       }
-    } catch (e) {
+    } catch {
       // ignore localStorage errors
     }
   }, []);
@@ -39,7 +39,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
   useEffect(() => {
     try {
       localStorage.setItem('sign_display_size', displaySize);
-    } catch (e) {
+    } catch {
       // ignore
     }
   }, [displaySize]);
@@ -47,7 +47,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
   // Close modal on ESC
   useEffect(() => {
     if (!modalOpen) return;
-    const onKey = (e: KeyboardEvent) => {
+    const onKey = (e: globalThis.KeyboardEvent) => {
       if (e.key === 'Escape') closeModal();
     };
     window.addEventListener('keydown', onKey);
@@ -113,7 +113,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
     }
   };
 
-  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSeek = (e: ChangeEvent<HTMLInputElement>) => {
     const seekTime = parseFloat(e.target.value);
     if (videoRef.current) {
       videoRef.current.currentTime = seekTime;
@@ -151,7 +151,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
       <div className="w-full h-full flex flex-col p-6 bg-white rounded-2xl shadow-xl border border-yellow-100 transition-all duration-300 hover:shadow-2xl hover:shadow-yellow-100">
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-3">
-            <div className="p-2 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-lg shadow-md">
+            <div className="p-2 bg-linear-to-br from-yellow-500 to-yellow-600 rounded-lg shadow-md">
               <Play className="h-6 w-6 text-white" fill="white" />
             </div>
             <h2 className="text-2xl font-bold text-yellow-900">Sign Language Output</h2>
@@ -191,7 +191,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
 
         <div className="flex-1 flex flex-col">
           {/* Video/Signs Display Area */}
-          <div className={`relative bg-gradient-to-br from-yellow-900 via-yellow-800 to-yellow-950 rounded-2xl overflow-hidden flex-1 flex items-center justify-center shadow-xl border-2 border-yellow-200 ${currentSize.containerMinH} p-4`}>
+          <div className={`relative bg-linear-to-br from-yellow-900 via-yellow-800 to-yellow-950 rounded-2xl overflow-hidden flex-1 flex items-center justify-center shadow-xl border-2 border-yellow-200 ${currentSize.containerMinH} p-4`}>
             {isLoading ? (
                 <div className="flex flex-col items-center justify-center h-full animate-pulse">
                   <div className="relative">
@@ -244,7 +244,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
             ) : (
                 <div className="text-center p-8 animate-fadeIn">
                   <div className="mb-6">
-                    <div className="mx-auto w-28 h-28 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-3xl flex items-center justify-center shadow-2xl animate-float">
+                    <div className="mx-auto w-28 h-28 bg-linear-to-br from-yellow-400 to-yellow-600 rounded-3xl flex items-center justify-center shadow-2xl animate-float">
                       <svg
                           className="h-16 w-16 text-white"
                           fill="none"
@@ -300,7 +300,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
                 <div className="flex items-center justify-center space-x-6">
                   <button
                       onClick={handleRestart}
-                      className="p-4 bg-gradient-to-br from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-300 transform hover:scale-110 active:scale-95"
+                      className="p-4 bg-linear-to-br from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-300 transform hover:scale-110 active:scale-95"
                       title="Restart"
                   >
                     <RotateCcw className="h-5 w-5 text-white" />
@@ -308,7 +308,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
 
                   <button
                       onClick={handlePlayPause}
-                      className="p-5 bg-gradient-to-br from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-yellow-400 transform hover:scale-110 active:scale-95"
+                      className="p-5 bg-linear-to-br from-yellow-600 to-yellow-700 hover:from-yellow-700 hover:to-yellow-800 rounded-full transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-yellow-400 transform hover:scale-110 active:scale-95"
                       title={isPlaying ? 'Pause' : 'Play'}
                   >
                     {isPlaying ? (
@@ -320,7 +320,7 @@ const SignLanguageDisplay = ({ videoUrl, signImages = [], isLoading }: SignLangu
 
                   <button
                       onClick={handleMuteToggle}
-                      className="p-4 bg-gradient-to-br from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-300 transform hover:scale-110 active:scale-95"
+                      className="p-4 bg-linear-to-br from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-300 transform hover:scale-110 active:scale-95"
                       title={isMuted ? 'Unmute' : 'Mute'}
                   >
                     {isMuted ? (

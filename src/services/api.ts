@@ -42,7 +42,7 @@ function readPreferredSize(): 'small' | 'medium' | 'large' {
   try {
     const s = localStorage.getItem('sign_display_size');
     if (s === 'small' || s === 'medium' || s === 'large') return s;
-  } catch (e) {
+  } catch (error) {
     // ignore localStorage errors
   }
   return DEFAULT_SIZE;

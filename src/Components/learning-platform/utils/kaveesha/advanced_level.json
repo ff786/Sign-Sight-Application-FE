@@ -1,0 +1,1971 @@
+{
+  "level": "Advanced",
+  "categories": {
+    "category_1": [],
+    "category_2": [],
+    "category_3": [
+      {
+        "id": "A-C3-1",
+        "area": "emotions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Angry.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Angry"
+          },
+          {
+            "id": "B",
+            "text": "thermal vision"
+          },
+          {
+            "id": "C",
+            "text": "infrared vision"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-2",
+        "area": "family",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Aunty.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "infrared vision"
+          },
+          {
+            "id": "B",
+            "text": "Aunty"
+          },
+          {
+            "id": "C",
+            "text": "night vision"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-3",
+        "area": "family",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Friend.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "night vision"
+          },
+          {
+            "id": "B",
+            "text": "bird body"
+          },
+          {
+            "id": "C",
+            "text": "Friend"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-4",
+        "area": "objects",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Consumer.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Consumer"
+          },
+          {
+            "id": "B",
+            "text": "bird body"
+          },
+          {
+            "id": "C",
+            "text": "fox body"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-5",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Black.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "fox body"
+          },
+          {
+            "id": "B",
+            "text": "Black"
+          },
+          {
+            "id": "C",
+            "text": "duck body"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-6",
+        "area": "actions",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/How well do you sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "duck body"
+          },
+          {
+            "id": "B",
+            "text": "Washington"
+          },
+          {
+            "id": "C",
+            "text": "How well do you sign?"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-7",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Washington.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Washington"
+          },
+          {
+            "id": "B",
+            "text": "Utah"
+          },
+          {
+            "id": "C",
+            "text": "Wyoming"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-8",
+        "area": "emotions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Happy.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Utah"
+          },
+          {
+            "id": "B",
+            "text": "Happy"
+          },
+          {
+            "id": "C",
+            "text": "Wyoming"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-9",
+        "area": "family",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Father.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Wyoming"
+          },
+          {
+            "id": "B",
+            "text": "For School"
+          },
+          {
+            "id": "C",
+            "text": "Father"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-10",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Good.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Good"
+          },
+          {
+            "id": "B",
+            "text": "For School"
+          },
+          {
+            "id": "C",
+            "text": "For Fun"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-11",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Weakness.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For Fun"
+          },
+          {
+            "id": "B",
+            "text": "Weakness"
+          },
+          {
+            "id": "C",
+            "text": "For Someone"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-12",
+        "area": "actions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/when.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For Someone"
+          },
+          {
+            "id": "B",
+            "text": "self-driving car"
+          },
+          {
+            "id": "C",
+            "text": "When"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-13",
+        "area": "actions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/For School.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For School"
+          },
+          {
+            "id": "B",
+            "text": "swivel seats"
+          },
+          {
+            "id": "C",
+            "text": "sunroof"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-14",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/He wants an animal that has.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "swivel seats"
+          },
+          {
+            "id": "B",
+            "text": "He wants an animal that has"
+          },
+          {
+            "id": "C",
+            "text": "sunroof"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-15",
+        "area": "emotions",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Sad.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "sunroof"
+          },
+          {
+            "id": "B",
+            "text": "polite directions"
+          },
+          {
+            "id": "C",
+            "text": "Sad"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-16",
+        "area": "family",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Mother.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mother"
+          },
+          {
+            "id": "B",
+            "text": "polite directions"
+          },
+          {
+            "id": "C",
+            "text": "school activity"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-17",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/My.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "school activity"
+          },
+          {
+            "id": "B",
+            "text": "My"
+          },
+          {
+            "id": "C",
+            "text": "dream animal"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-18",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Red.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "dream animal"
+          },
+          {
+            "id": "B",
+            "text": "sign practice"
+          },
+          {
+            "id": "C",
+            "text": "Red"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-19",
+        "area": "actions",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/When can I learn to sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "When can I learn to sign?"
+          },
+          {
+            "id": "B",
+            "text": "sign practice"
+          },
+          {
+            "id": "C",
+            "text": "personal introduction"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-20",
+        "area": "actions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/where are you from.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "personal introduction"
+          },
+          {
+            "id": "B",
+            "text": "Where are you from?"
+          },
+          {
+            "id": "C",
+            "text": "thermal vision"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-21",
+        "area": "emotions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Angry.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "thermal vision"
+          },
+          {
+            "id": "B",
+            "text": "infrared vision"
+          },
+          {
+            "id": "C",
+            "text": "Angry"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-22",
+        "area": "family",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Aunty.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Aunty"
+          },
+          {
+            "id": "B",
+            "text": "infrared vision"
+          },
+          {
+            "id": "C",
+            "text": "night vision"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-23",
+        "area": "family",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Friend.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "night vision"
+          },
+          {
+            "id": "B",
+            "text": "Friend"
+          },
+          {
+            "id": "C",
+            "text": "bird body"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-24",
+        "area": "objects",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Consumer.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "bird body"
+          },
+          {
+            "id": "B",
+            "text": "fox body"
+          },
+          {
+            "id": "C",
+            "text": "Consumer"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-25",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Black.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Black"
+          },
+          {
+            "id": "B",
+            "text": "fox body"
+          },
+          {
+            "id": "C",
+            "text": "duck body"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-26",
+        "area": "actions",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/How well do you sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "duck body"
+          },
+          {
+            "id": "B",
+            "text": "How well do you sign?"
+          },
+          {
+            "id": "C",
+            "text": "Washington"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-27",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Washington.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Wyoming"
+          },
+          {
+            "id": "B",
+            "text": "For School"
+          },
+          {
+            "id": "C",
+            "text": "Washington"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-28",
+        "area": "emotions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Happy.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Happy"
+          },
+          {
+            "id": "B",
+            "text": "Utah"
+          },
+          {
+            "id": "C",
+            "text": "Wyoming"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-29",
+        "area": "family",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Father.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Wyoming"
+          },
+          {
+            "id": "B",
+            "text": "Father"
+          },
+          {
+            "id": "C",
+            "text": "For School"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-30",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Good.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For School"
+          },
+          {
+            "id": "B",
+            "text": "For Fun"
+          },
+          {
+            "id": "C",
+            "text": "Good"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-31",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Weakness.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Weakness"
+          },
+          {
+            "id": "B",
+            "text": "For Fun"
+          },
+          {
+            "id": "C",
+            "text": "For Someone"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-32",
+        "area": "actions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/when.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For Someone"
+          },
+          {
+            "id": "B",
+            "text": "When"
+          },
+          {
+            "id": "C",
+            "text": "self-driving car"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-33",
+        "area": "actions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/For School.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "sunroof"
+          },
+          {
+            "id": "B",
+            "text": "polite directions"
+          },
+          {
+            "id": "C",
+            "text": "For School"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-34",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/He wants an animal that has.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "He wants an animal that has"
+          },
+          {
+            "id": "B",
+            "text": "swivel seats"
+          },
+          {
+            "id": "C",
+            "text": "sunroof"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-35",
+        "area": "emotions",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Sad.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "sunroof"
+          },
+          {
+            "id": "B",
+            "text": "Sad"
+          },
+          {
+            "id": "C",
+            "text": "polite directions"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-36",
+        "area": "family",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Mother.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "polite directions"
+          },
+          {
+            "id": "B",
+            "text": "school activity"
+          },
+          {
+            "id": "C",
+            "text": "Mother"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-37",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/My.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "My"
+          },
+          {
+            "id": "B",
+            "text": "school activity"
+          },
+          {
+            "id": "C",
+            "text": "dream animal"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-38",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Red.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "dream animal"
+          },
+          {
+            "id": "B",
+            "text": "Red"
+          },
+          {
+            "id": "C",
+            "text": "sign practice"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-39",
+        "area": "actions",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/When can I learn to sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "sign practice"
+          },
+          {
+            "id": "B",
+            "text": "personal introduction"
+          },
+          {
+            "id": "C",
+            "text": "When can I learn to sign?"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-40",
+        "area": "actions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/where are you from.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Where are you from?"
+          },
+          {
+            "id": "B",
+            "text": "personal introduction"
+          },
+          {
+            "id": "C",
+            "text": "thermal vision"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-41",
+        "area": "emotions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Angry.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "thermal vision"
+          },
+          {
+            "id": "B",
+            "text": "Angry"
+          },
+          {
+            "id": "C",
+            "text": "infrared vision"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-42",
+        "area": "family",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Aunty.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "infrared vision"
+          },
+          {
+            "id": "B",
+            "text": "night vision"
+          },
+          {
+            "id": "C",
+            "text": "Aunty"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-43",
+        "area": "family",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Friend.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Friend"
+          },
+          {
+            "id": "B",
+            "text": "night vision"
+          },
+          {
+            "id": "C",
+            "text": "bird body"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-44",
+        "area": "objects",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Consumer.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "bird body"
+          },
+          {
+            "id": "B",
+            "text": "Consumer"
+          },
+          {
+            "id": "C",
+            "text": "fox body"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-45",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Black.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "fox body"
+          },
+          {
+            "id": "B",
+            "text": "duck body"
+          },
+          {
+            "id": "C",
+            "text": "Black"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-46",
+        "area": "actions",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/How well do you sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "How well do you sign?"
+          },
+          {
+            "id": "B",
+            "text": "duck body"
+          },
+          {
+            "id": "C",
+            "text": "Washington"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-47",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Washington.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For School"
+          },
+          {
+            "id": "B",
+            "text": "Washington"
+          },
+          {
+            "id": "C",
+            "text": "For Fun"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-48",
+        "area": "emotions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Happy.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Utah"
+          },
+          {
+            "id": "B",
+            "text": "Wyoming"
+          },
+          {
+            "id": "C",
+            "text": "Happy"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-49",
+        "area": "family",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Father.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Father"
+          },
+          {
+            "id": "B",
+            "text": "Wyoming"
+          },
+          {
+            "id": "C",
+            "text": "For School"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-50",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Good.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For School"
+          },
+          {
+            "id": "B",
+            "text": "Good"
+          },
+          {
+            "id": "C",
+            "text": "For Fun"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-51",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Weakness.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For Fun"
+          },
+          {
+            "id": "B",
+            "text": "For Someone"
+          },
+          {
+            "id": "C",
+            "text": "Weakness"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-52",
+        "area": "actions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/when.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "When"
+          },
+          {
+            "id": "B",
+            "text": "For Someone"
+          },
+          {
+            "id": "C",
+            "text": "self-driving car"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-53",
+        "area": "actions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/For School.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "polite directions"
+          },
+          {
+            "id": "B",
+            "text": "For School"
+          },
+          {
+            "id": "C",
+            "text": "school activity"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-54",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/He wants an animal that has.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "swivel seats"
+          },
+          {
+            "id": "B",
+            "text": "sunroof"
+          },
+          {
+            "id": "C",
+            "text": "He wants an animal that has"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-55",
+        "area": "emotions",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Sad.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sad"
+          },
+          {
+            "id": "B",
+            "text": "sunroof"
+          },
+          {
+            "id": "C",
+            "text": "polite directions"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-56",
+        "area": "family",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Mother.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "polite directions"
+          },
+          {
+            "id": "B",
+            "text": "Mother"
+          },
+          {
+            "id": "C",
+            "text": "school activity"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-57",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/My.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "school activity"
+          },
+          {
+            "id": "B",
+            "text": "dream animal"
+          },
+          {
+            "id": "C",
+            "text": "My"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-58",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Red.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Red"
+          },
+          {
+            "id": "B",
+            "text": "dream animal"
+          },
+          {
+            "id": "C",
+            "text": "sign practice"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-59",
+        "area": "actions",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/When can I learn to sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "sign practice"
+          },
+          {
+            "id": "B",
+            "text": "When can I learn to sign?"
+          },
+          {
+            "id": "C",
+            "text": "personal introduction"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-60",
+        "area": "actions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/where are you from.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "personal introduction"
+          },
+          {
+            "id": "B",
+            "text": "thermal vision"
+          },
+          {
+            "id": "C",
+            "text": "Where are you from?"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-61",
+        "area": "emotions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Angry.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Angry"
+          },
+          {
+            "id": "B",
+            "text": "thermal vision"
+          },
+          {
+            "id": "C",
+            "text": "infrared vision"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-62",
+        "area": "family",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Aunty.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "infrared vision"
+          },
+          {
+            "id": "B",
+            "text": "Aunty"
+          },
+          {
+            "id": "C",
+            "text": "night vision"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-63",
+        "area": "family",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Friend.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "night vision"
+          },
+          {
+            "id": "B",
+            "text": "bird body"
+          },
+          {
+            "id": "C",
+            "text": "Friend"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-64",
+        "area": "objects",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Consumer.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Consumer"
+          },
+          {
+            "id": "B",
+            "text": "bird body"
+          },
+          {
+            "id": "C",
+            "text": "fox body"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-65",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Black.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "fox body"
+          },
+          {
+            "id": "B",
+            "text": "Black"
+          },
+          {
+            "id": "C",
+            "text": "duck body"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-66",
+        "area": "actions",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/How well do you sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "duck body"
+          },
+          {
+            "id": "B",
+            "text": "Washington"
+          },
+          {
+            "id": "C",
+            "text": "How well do you sign?"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-67",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Washington.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Washington"
+          },
+          {
+            "id": "B",
+            "text": "For Fun"
+          },
+          {
+            "id": "C",
+            "text": "For Someone"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-68",
+        "area": "emotions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Happy.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Utah"
+          },
+          {
+            "id": "B",
+            "text": "Happy"
+          },
+          {
+            "id": "C",
+            "text": "Wyoming"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-69",
+        "area": "family",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Father.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Wyoming"
+          },
+          {
+            "id": "B",
+            "text": "For School"
+          },
+          {
+            "id": "C",
+            "text": "Father"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-70",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Good.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Good"
+          },
+          {
+            "id": "B",
+            "text": "For School"
+          },
+          {
+            "id": "C",
+            "text": "For Fun"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-71",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Weakness.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For Fun"
+          },
+          {
+            "id": "B",
+            "text": "Weakness"
+          },
+          {
+            "id": "C",
+            "text": "For Someone"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-72",
+        "area": "actions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/when.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For Someone"
+          },
+          {
+            "id": "B",
+            "text": "self-driving car"
+          },
+          {
+            "id": "C",
+            "text": "When"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-73",
+        "area": "actions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/For School.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For School"
+          },
+          {
+            "id": "B",
+            "text": "school activity"
+          },
+          {
+            "id": "C",
+            "text": "dream animal"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-74",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/He wants an animal that has.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "swivel seats"
+          },
+          {
+            "id": "B",
+            "text": "He wants an animal that has"
+          },
+          {
+            "id": "C",
+            "text": "sunroof"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-75",
+        "area": "emotions",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Sad.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "sunroof"
+          },
+          {
+            "id": "B",
+            "text": "polite directions"
+          },
+          {
+            "id": "C",
+            "text": "Sad"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-76",
+        "area": "family",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Mother.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mother"
+          },
+          {
+            "id": "B",
+            "text": "polite directions"
+          },
+          {
+            "id": "C",
+            "text": "school activity"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-77",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/My.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "school activity"
+          },
+          {
+            "id": "B",
+            "text": "My"
+          },
+          {
+            "id": "C",
+            "text": "dream animal"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-78",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Red.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "dream animal"
+          },
+          {
+            "id": "B",
+            "text": "sign practice"
+          },
+          {
+            "id": "C",
+            "text": "Red"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-79",
+        "area": "actions",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/When can I learn to sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "When can I learn to sign?"
+          },
+          {
+            "id": "B",
+            "text": "sign practice"
+          },
+          {
+            "id": "C",
+            "text": "personal introduction"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-80",
+        "area": "actions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/where are you from.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "personal introduction"
+          },
+          {
+            "id": "B",
+            "text": "Where are you from?"
+          },
+          {
+            "id": "C",
+            "text": "thermal vision"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-81",
+        "area": "emotions",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Angry.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "thermal vision"
+          },
+          {
+            "id": "B",
+            "text": "infrared vision"
+          },
+          {
+            "id": "C",
+            "text": "Angry"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-82",
+        "area": "family",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Aunty.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Aunty"
+          },
+          {
+            "id": "B",
+            "text": "infrared vision"
+          },
+          {
+            "id": "C",
+            "text": "night vision"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-83",
+        "area": "family",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Friend.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "night vision"
+          },
+          {
+            "id": "B",
+            "text": "Friend"
+          },
+          {
+            "id": "C",
+            "text": "bird body"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-84",
+        "area": "objects",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Consumer.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "bird body"
+          },
+          {
+            "id": "B",
+            "text": "fox body"
+          },
+          {
+            "id": "C",
+            "text": "Consumer"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-85",
+        "area": "objects",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Black.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Black"
+          },
+          {
+            "id": "B",
+            "text": "fox body"
+          },
+          {
+            "id": "C",
+            "text": "duck body"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-86",
+        "area": "actions",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/How well do you sign.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "duck body"
+          },
+          {
+            "id": "B",
+            "text": "How well do you sign?"
+          },
+          {
+            "id": "C",
+            "text": "Washington"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-87",
+        "area": "objects",
+        "question": "What answer matches the signer in this video?",
+        "question_video": "/images/signs/Washington.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For Someone"
+          },
+          {
+            "id": "B",
+            "text": "self-driving car"
+          },
+          {
+            "id": "C",
+            "text": "Washington"
+          }
+        ],
+        "correct_answer": "C"
+      },
+      {
+        "id": "A-C3-88",
+        "area": "emotions",
+        "question": "Identify the phrase or concept shown by the signer.",
+        "question_video": "/images/signs/Happy.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Happy"
+          },
+          {
+            "id": "B",
+            "text": "Utah"
+          },
+          {
+            "id": "C",
+            "text": "Wyoming"
+          }
+        ],
+        "correct_answer": "A"
+      },
+      {
+        "id": "A-C3-89",
+        "area": "family",
+        "question": "What is the main idea shown in this sign video?",
+        "question_video": "/images/signs/Father.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "Wyoming"
+          },
+          {
+            "id": "B",
+            "text": "Father"
+          },
+          {
+            "id": "C",
+            "text": "For School"
+          }
+        ],
+        "correct_answer": "B"
+      },
+      {
+        "id": "A-C3-90",
+        "area": "objects",
+        "question": "Choose the meaning that best matches the signed phrase.",
+        "question_video": "/images/signs/Good.mp4",
+        "options": [
+          {
+            "id": "A",
+            "text": "For School"
+          },
+          {
+            "id": "B",
+            "text": "For Fun"
+          },
+          {
+            "id": "C",
+            "text": "Good"
+          }
+        ],
+        "correct_answer": "C"
+      }
+    ],
+    "category_4": [
+      {
+        "id": "A-C4-1",
+        "area": "actions",
+        "question_video": "/images/signs/where are you from.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Answer where you are from using sign language."
+      },
+      {
+        "id": "A-C4-2",
+        "area": "actions",
+        "question_video": "/images/signs/When can I learn to sign.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Respond to the question using a signed sentence."
+      },
+      {
+        "id": "A-C4-3",
+        "area": "actions",
+        "question_video": "/images/signs/How well do you sign.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Answer how well you sign."
+      },
+      {
+        "id": "A-C4-4",
+        "area": "actions",
+        "question_video": "/images/signs/For School.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Sign a short response about school."
+      },
+      {
+        "id": "A-C4-5",
+        "area": "objects",
+        "question_video": "/images/signs/He wants an animal that has.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Describe the animal idea in sign language."
+      },
+      {
+        "id": "A-C4-6",
+        "area": "actions",
+        "question_video": "/images/signs/where are you from.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Answer where you are from using sign language."
+      },
+      {
+        "id": "A-C4-7",
+        "area": "actions",
+        "question_video": "/images/signs/When can I learn to sign.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Respond to the question using a signed sentence."
+      },
+      {
+        "id": "A-C4-8",
+        "area": "actions",
+        "question_video": "/images/signs/How well do you sign.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Answer how well you sign."
+      },
+      {
+        "id": "A-C4-9",
+        "area": "actions",
+        "question_video": "/images/signs/For School.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Sign a short response about school."
+      },
+      {
+        "id": "A-C4-10",
+        "area": "objects",
+        "question_video": "/images/signs/He wants an animal that has.mp4",
+        "instruction": "Watch the video and record your response using sign language.",
+        "expected_output": "Describe the animal idea in sign language."
+      }
+    ]
+  }
+}

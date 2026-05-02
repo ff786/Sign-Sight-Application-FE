@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import YoutubePlayer from './YoutubePlayer.tsx';
+import YoutubePlayer from "./YoutubePlayer";
 import { addAnswerForQuestion, useAppDispatch } from "../../../store";
 
 export default function Category3_VideoToText({

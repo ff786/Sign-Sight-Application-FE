@@ -19,6 +19,11 @@ import AdminLogin from "./pages/kaveesha/AdminLogin";
 import AdminDashboard from "./pages/kaveesha/AdminDashboard";
 import StudentAttemptsPage from "./pages/kaveesha/StudentAttemptsPage";
 
+import Emotion_landing from "./pages/hasadara/Emotion_Landing";
+import Instructions from "./pages/hasadara/Instructions";
+import EmotionFlow from "./pages/hasadara/EmotionFlow";
+import Result from "./pages/hasadara/Result";
+
 
 function App() {
   return (
@@ -48,6 +53,10 @@ function App() {
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
 
+          <Route path="/emotion_landing" element={<Emotion_landing />} />
+          <Route path="/instructions" element={<Instructions />} />
+          <Route path="/emotion" element={<EmotionFlow />} />
+          <Route path="/result" element={<Result />} />
         {/* <Route path="/lessons/food/:food" element={<FoodPlayer />} />
         <Route path="/lessons/numbers/:number" element={<NumberViewer />} /> */}
       </Routes>

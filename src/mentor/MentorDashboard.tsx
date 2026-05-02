@@ -1,4 +1,4 @@
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useUsers, useUserSummary } from "./hooks/useMentorData";
 import OverviewPage from "./pages/OverviewPage";
 import LevelViewPage from "./pages/LevelViewPage";
@@ -6,7 +6,7 @@ import AttemptsPage from "./pages/AttemptsPage";
 import {
   SkeletonStatRow,
   SkeletonChartRow,
-} from "./components/SharedComponents";
+} from "./Components/SharedComponents";
 import { useNavigate } from "react-router-dom";
 
 type NavId = "overview" | "level" | "attempts";

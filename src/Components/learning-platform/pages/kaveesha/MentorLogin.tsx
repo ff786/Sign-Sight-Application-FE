@@ -1,10 +1,10 @@
-import Navbar from "../../Navbar";
-import PrimaryButton from "../../PrimaryButton";
+import Navbar from "../../Components/Navbar";
+import PrimaryButton from "../../Components/PrimaryButton";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../firebase";
-import Toast from "../../Toast";
+import { auth } from "../../../../firebase";
+import Toast from "../../Components/Toast";
 import { useToast } from "../../../../hooks/useToast";
 
 export default function MentorLogin() {

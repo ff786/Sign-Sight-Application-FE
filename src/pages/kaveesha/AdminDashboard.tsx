@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { MENTOR_BASE_URI } from "../../config/CONFIG";
-import Toast from "../../components/kaveesha/Toast";
+import Toast from "../../Components/kaveesha/Toast";
 import { useToast } from "../../hooks/useToast";
 
 export default function AdminDashboard() {

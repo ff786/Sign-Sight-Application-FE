@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Toast from "../../components/kaveesha/Toast";
+import Toast from "../../Components/kaveesha/Toast";
 import { useToast } from "../../hooks/useToast";
 
 export default function AdminLogin() {

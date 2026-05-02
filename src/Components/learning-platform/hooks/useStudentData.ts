@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import type { AttemptsPage, Level } from "../types";
-import { MENTOR_BASE_URI } from "../../config/CONFIG";
+import { MENTOR_BASE_URI } from "../../../config/CONFIG";
 
 const API = `${MENTOR_BASE_URI}/api/dashboard`;
 

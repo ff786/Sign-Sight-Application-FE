@@ -14,8 +14,8 @@ import {
   SkeletonTable,
   scoreHex,
   formatDate,
-  AREA_COLORS,
-} from "../../mentor/components/SharedComponents";
+  //AREA_COLORS,
+} from "../../mentor/Components/SharedComponents";
 
 // Helper to extract date string from either format
 const getDateString = (
@@ -396,7 +396,7 @@ function VideoDetail({ analysis }: { analysis: VideoAnalysis }) {
 
   const finalPercentages = ecData?.final_prediction_percentages ?? {};
   const finalStats = ecData?.final_prediction_statistics ?? {};
-  const modelStats = ecData?.model_statistics ?? {};
+  //const modelStats = ecData?.model_statistics ?? {};
   const avgConfidence = ecData?.average_model_confidence ?? {};
   const faceDetection = ecData?.face_detection ?? {};
 

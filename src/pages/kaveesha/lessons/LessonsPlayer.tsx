@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { LESSONS_CONFIG } from "../../../config/lessonsConfig";
-import Navbar from "../../../components/kaveesha/Navbar";
-import LessonBackground from "../../../components/ui/LessonBackground";
+//import Navbar from "../../../Components/kaveesha/Navbar";
+import LessonBackground from "../../../Components/ui/LessonBackground";
 
 export default function LessonPlayer() {
   const { category, item } = useParams();

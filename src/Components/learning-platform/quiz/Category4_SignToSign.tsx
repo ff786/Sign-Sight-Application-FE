@@ -3,8 +3,8 @@ import YoutubePlayer from "./YoutubePlayer";
 
 export default function Category4_SignToSign({
   question,
-  level,
-  category,
+  /*level,
+  category,*/
   onNext,
   onVideoRecorded,
 }: any) {

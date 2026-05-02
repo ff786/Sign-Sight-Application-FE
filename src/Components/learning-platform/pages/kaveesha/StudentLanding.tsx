@@ -2,9 +2,9 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import GlassPage from "../../../ui/GlassPage";
-import Navbar from "../../Navbar";
-import PrimaryButton from "../../PrimaryButton";
-import { auth } from "../../firebase";
+import Navbar from "../../Components/Navbar";
+import PrimaryButton from "../../Components/PrimaryButton";
+import { auth } from "../../../../firebase";
 import { signOut } from "firebase/auth";
 
 type Level = "basic" | "intermediate" | "advanced";

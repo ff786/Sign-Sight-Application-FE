@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import LessonBackground from "../../../components/ui/LessonBackground";
-import CategoryIntroModal from "../../../components/kaveesha/lessons/CategoryIntroModal";
-import Navbar from "../../../components/kaveesha/Navbar";
+import LessonBackground from "../../../Components/ui/LessonBackground";
+import CategoryIntroModal from "../../../Components/kaveesha/lessons/CategoryIntroModal";
+import Navbar from "../../../Components/kaveesha/Navbar";
 
 type Category = "colors" | "food" | "numbers";
 

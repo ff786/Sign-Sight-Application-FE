@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Toast from "../../Toast";
+import Toast from "../../Components/Toast";
 import { useToast } from "../../../../hooks/useToast";
 
 export default function AdminLogin() {

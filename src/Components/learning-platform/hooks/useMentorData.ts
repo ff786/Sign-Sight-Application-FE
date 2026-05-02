@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "React";
+import { useState, useEffect, useCallback } from "react";
 import type { UserDocument, UserSummary, AttemptsPage, Level } from "../types";
 import { MENTOR_BASE_URI } from "../../../config/CONFIG";
 

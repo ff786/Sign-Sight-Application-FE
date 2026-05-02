@@ -1,9 +1,9 @@
 
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import GlassPage from "../../components/ui/GlassPage";
-import Navbar from "../../components/kaveesha/Navbar";
-import PrimaryButton from "../../components/kaveesha/PrimaryButton";
+import GlassPage from "../../Components/ui/GlassPage";
+import Navbar from "../../Components/kaveesha/Navbar";
+import PrimaryButton from "../../Components/kaveesha/PrimaryButton";
 import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 

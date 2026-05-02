@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { LESSONS_CONFIG } from "../../../../../config/lessonsConfig";
-import Navbar from "../../../Navbar";
+//import Navbar from "../../../Components/Navbar";
 import LessonBackground from "../../../../ui/LessonBackground";
 
 export default function LessonPlayer() {

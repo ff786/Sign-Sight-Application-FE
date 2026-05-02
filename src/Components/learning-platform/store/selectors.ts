@@ -1,4 +1,4 @@
-import { RootState } from "./store";
+import type { RootState } from "./store";
 
 export const selectResultsByLevel =
   (level: "basic" | "intermediate" | "advanced") => (state: RootState) => ({

@@ -1,10 +1,10 @@
-import Navbar from "../../components/kaveesha/Navbar";
-import PrimaryButton from "../../components/kaveesha/PrimaryButton";
+import Navbar from "../../Components/kaveesha/Navbar";
+import PrimaryButton from "../../Components/kaveesha/PrimaryButton";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
-import Toast from "../../components/kaveesha/Toast";
+import Toast from "../../Components/kaveesha/Toast";
 import { useToast } from "../../hooks/useToast";
 
 export default function MentorLogin() {

@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Toast from "../../../components/kaveesha/Toast";
+import Toast from "../../../Components/kaveesha/Toast";
 import { useToast } from "../../../hooks/useToast";
 
-import Category1_MCQ from "../../../components/kaveesha/quiz/Category1_MCQ";
-import Category2_TextToVideo from "../../../components/kaveesha/quiz/Category2_TextToVideo";
-import Category3_VideoToText from "../../../components/kaveesha/quiz/Category3_VideoToText";
-import Category4_SignToSign from "../../../components/kaveesha/quiz/Category4_SignToSign";
-import GlassPage from "../../../components/ui/GlassPage";
+import Category1_MCQ from "../../../Components/kaveesha/quiz/Category1_MCQ";
+import Category2_TextToVideo from "../../../Components/kaveesha/quiz/Category2_TextToVideo";
+import Category3_VideoToText from "../../../Components/kaveesha/quiz/Category3_VideoToText";
+import Category4_SignToSign from "../../../Components/kaveesha/quiz/Category4_SignToSign";
+import GlassPage from "../../../Components/ui/GlassPage";
 import { resetAnswers, useAppDispatch, useAppSelector } from "../../../store";
 import { selectResultsByLevel } from "../../../store/selectors";
 import { submitLevelResults } from "../../../services/submitLevelResults";

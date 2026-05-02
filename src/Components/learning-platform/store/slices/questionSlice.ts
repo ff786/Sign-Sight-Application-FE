@@ -1,5 +1,6 @@
 // src/store/questionSlice.ts
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
 type Answer = {
   question_id: string;

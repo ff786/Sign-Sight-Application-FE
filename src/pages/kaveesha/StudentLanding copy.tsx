@@ -1,8 +1,8 @@
-import Navbar from "../../components/kaveesha/Navbar";
-import PrimaryButton from "../../components/kaveesha/PrimaryButton";
+import Navbar from "../../Components/kaveesha/Navbar";
+import PrimaryButton from "../../Components/kaveesha/PrimaryButton";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import GlassPage from "../../components/ui/GlassPage";
+import GlassPage from "../../Components/ui/GlassPage";
 
 type Level = "basic" | "intermediate" | "advanced";
 

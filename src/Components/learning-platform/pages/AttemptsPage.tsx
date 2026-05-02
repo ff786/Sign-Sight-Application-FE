@@ -9,8 +9,8 @@ import {
   SkeletonTable,
   scoreHex,
   formatDate,
-  AREA_COLORS,
-} from "../components/SharedComponents";
+  //AREA_COLORS,
+} from "../Components/SharedComponents";
 
 // Helper to extract date string from either format
 const getDateString = (

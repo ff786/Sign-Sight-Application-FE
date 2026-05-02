@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import type { AttemptsPage, Level } from "../mentor/types";
-import { BACKEND_BASE_URI } from "../config/CONFIG";
+//import { BACKEND_BASE_URI } from "../config/CONFIG";
 
 const API = "/api/dashboard"; // proxied by Vite → port 5050
 

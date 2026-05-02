@@ -3,10 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import App from './App.tsx';
+import './style.css';
 
-// Note: I've kept index.css, ensure it contains your styles
-// or swap it with './style.css' if that is your primary stylesheet.
-import './index.css';
 
 const rootElement = document.getElementById('root');
 

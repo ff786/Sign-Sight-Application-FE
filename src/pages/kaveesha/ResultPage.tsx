@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import PrimaryButton from "../../components/kaveesha/PrimaryButton";
+import PrimaryButton from "../../Components/kaveesha/PrimaryButton";
 
 export default function ResultPage() {
   const nav = useNavigate();

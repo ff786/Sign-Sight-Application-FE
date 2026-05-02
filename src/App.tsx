@@ -19,14 +19,13 @@ import AdminLogin from "./pages/kaveesha/AdminLogin";
 import AdminDashboard from "./pages/kaveesha/AdminDashboard";
 import StudentAttemptsPage from "./pages/kaveesha/StudentAttemptsPage";
 
-import './App.css'
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/Home" element={<HomePage />} />
         <Route path="/convert" element={<ConversionPage />} />
         <Route path="*" element={<HomePage />} />
         <Route path="/" element={<StudentLogin />} />

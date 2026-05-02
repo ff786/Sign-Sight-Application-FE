@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import type { UserDocument, UserSummary, AttemptsPage, Level } from "../types";
-import { BACKEND_BASE_URI, MENTOR_BASE_URI } from "../../config/CONFIG";
+import { MENTOR_BASE_URI } from "../../config/CONFIG";
 
 const API = "/api/dashboard"; // proxied by Vite → port 5050
 // Get mentor email from localStorage or your auth state

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import Toast from "../../../Toast";
+import Toast from "../../../Components/Toast";
 import { useToast } from "../../../../../hooks/useToast";
 
 import Category1_MCQ from "../../../quiz/Category1_MCQ";

@@ -15,12 +15,12 @@ import type { UserSummary, Area, Assessment } from "../types";
 import {
   StatCard,
   Card,
-  AreaBar,
   AREA_COLORS,
   ASSESS_COLORS,
   ALL_AREAS,
-  scoreHex,
-} from "../components/SharedComponents";
+  /*AreaBar,
+  scoreHex,*/
+} from "../Components/SharedComponents";
 
 /* ============================================================
    CUSTOM TOOLTIPS

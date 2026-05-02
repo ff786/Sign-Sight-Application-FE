@@ -36,10 +36,24 @@ export interface HealthCheckResponse {
  * @param file - The audio file to convert
  * @returns Promise with the conversion response
  */
+const DEFAULT_SIZE: 'small' | 'medium' | 'large' = 'medium';
+
+function readPreferredSize(): 'small' | 'medium' | 'large' {
+  try {
+    const s = localStorage.getItem('sign_display_size');
+    if (s === 'small' || s === 'medium' || s === 'large') return s;
+  } catch (e) {
+    // ignore localStorage errors
+  }
+  return DEFAULT_SIZE;
+}
+
 export const uploadAudio = async (file: File): Promise<ConversionResponse> => {
   try {
     const formData = new FormData();
     formData.append('audio', file);
+    // include preferred display size (optional for audio)
+    formData.append('size', readPreferredSize());
 
     const response = await fetch(`${API_BASE_URL}/api/audio-to-sign/upload-audio`, {
       method: 'POST',
@@ -69,6 +83,8 @@ export const uploadVideo = async (file: File): Promise<ConversionResponse> => {
   try {
     const formData = new FormData();
     formData.append('video', file);
+    // include desired display size so backend can return a resized URL
+    formData.append('size', readPreferredSize());
 
     const response = await fetch(`${API_BASE_URL}/api/audio-to-sign/upload-video`, {
       method: 'POST',

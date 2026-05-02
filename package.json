@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "lucide-react": "^0.562.0",
+    "react-router-dom": "^6.14.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
@@ -24,6 +25,9 @@
     "@vitejs/plugin-react-swc": "^4.2.2",
     "autoprefixer": "^10.4.23",
     "eslint": "^9.39.1",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",

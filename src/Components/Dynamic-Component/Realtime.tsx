@@ -3,7 +3,13 @@ import React, { useEffect, useRef, useState } from 'react';
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap');
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.home-root,
+.home-root * ,
+.home-root *::before,
+.home-root *::after {
+  box-sizing: border-box;
+}
+
 
 :root {
   --color-cream: #FFFBF0;

@@ -15,7 +15,7 @@ import {
   scoreHex,
   formatDate,
   //AREA_COLORS,
-} from "../../mentor/Components/SharedComponents";
+} from "../../mentor/components/SharedComponents";
 
 // Helper to extract date string from either format
 const getDateString = (

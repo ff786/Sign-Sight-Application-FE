@@ -23,7 +23,7 @@ import {
   AREA_COLORS,
   ASSESS_COLORS,
   ALL_AREAS,
-} from "../Components/SharedComponents";
+} from "../components/SharedComponents";
 
 const LEVELS: Level[] = ["basic", "intermediate", "advanced"];
 

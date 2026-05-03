@@ -2,11 +2,11 @@ import { useState, useEffect, useCallback } from "react";
 import type { UserDocument, UserSummary, AttemptsPage, Level } from "../types";
 import { MENTOR_BASE_URI } from "../../config/CONFIG";
 
-const API = "/api/dashboard"; // proxied by Vite → port 5050
+const API = "/api/dashboard"; // proxied by Vite → port 5080
 // Get mentor email from localStorage or your auth state
 const mentorEmail = localStorage.getItem("mentorEmail");
 
-// const API = `/api/${mentorEmail}/dashboard`; // proxied by Vite → port 5050
+// const API = `/api/${mentorEmail}/dashboard`; // proxied by Vite → port 5080
 // ============================================================
 // 1.  useUsers  —  fetch the full user list once
 // ============================================================

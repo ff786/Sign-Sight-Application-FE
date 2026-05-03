@@ -1,7 +1,20 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Zap, Users, Heart } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+import { useState } from 'react';
+import SignSightDemo from '../assets/SignSight.mp4';
+import HeroImage from '../assets/hero-img.png';
 
 export default function LandingPage() {
+  const { isAuthenticated, user } = useAuth();
+  const [showDemo, setShowDemo] = useState(false);
+
+  const nextStepPath = user?.role === 'mentor'
+    ? '/mentorDash'
+    : user?.role === 'admin'
+      ? '/admin/dashboard'
+      : '/student/landing';
+
   const features = [
     {
       icon: '🎙️',
@@ -46,6 +59,11 @@ export default function LandingPage() {
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <img
+          src={HeroImage}
+          alt="SignSight Hero"
+          className="w-full max-w-md mx-auto object-contain transition-transform duration-300 hover:scale-105 rounded-2xl shadow-lg"
+          />
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-2">
@@ -66,10 +84,15 @@ export default function LandingPage() {
                 to="/signup"
                 className="px-8 py-4 bg-yellow-700 text-white font-bold rounded-lg shadow-sm hover:bg-yellow-800 transition-all flex items-center justify-center space-x-2"
               >
-                <span>Start Learning</span>
+                <span>Start Exploring</span>
                 <ArrowRight size={20} />
               </Link>
-              <button className="px-8 py-4 border-2 border-yellow-700 text-yellow-800 font-bold rounded-lg hover:bg-yellow-100 transition-all flex items-center justify-center space-x-2">
+              <button
+                className="px-8 py-4 border-2 border-yellow-700 text-yellow-800 font-bold rounded-lg hover:bg-yellow-100 transition-all flex items-center justify-center space-x-2"
+                onClick={() => setShowDemo((v) => !v)}
+                aria-expanded={showDemo}
+                aria-controls="demo-video-section"
+              >
                 <Play size={20} />
                 <span>Watch Demo</span>
               </button>
@@ -77,11 +100,33 @@ export default function LandingPage() {
           </div>
 
           {/* Right Visual */}
-          <div className="relative h-96 bg-amber-100 border border-amber-200 rounded-3xl shadow-sm flex items-center justify-center group">
-            <div className="text-9xl">🤟</div>
-          </div>
+          {/*<div className="relative h-96 bg-amber-100 border border-amber-200 rounded-3xl shadow-sm flex items-center justify-center group">
+            <img
+              src={HeroImage}
+              alt="SignSight Logo"
+              className="w-2/3 max-w-svh object-fill transition-transform duration-300 group-hover:scale-105 mx-auto"
+            />
+          </div>*/}
         </div>
       </section>
+
+      {/* Demo Video Section (conditionally rendered) */}
+      {showDemo && (
+        <section
+          id="demo-video-section"
+          className="flex flex-col items-center justify-center py-8 bg-white border-y border-yellow-100"
+        >
+          <video
+            src={SignSightDemo}
+            controls
+            className="w-full max-w-3xl rounded-2xl shadow-lg border border-yellow-200"
+            poster={undefined}
+            aria-label="SignSight Demo Video"
+          >
+            Sorry, your browser does not support embedded videos.
+          </video>
+        </section>
+      )}
 
       {/* Stats Section */}
       <section className="bg-white py-16 border-y border-yellow-100">
@@ -163,24 +208,49 @@ export default function LandingPage() {
       {/* CTA Section */}
       <section className="bg-yellow-900 py-16 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <h2 className="text-4xl md:text-5xl font-bold">Ready to Start?</h2>
-          <p className="text-xl opacity-90">
-            Join thousands of learners today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/signup"
-              className="px-8 py-4 bg-yellow-100 text-yellow-900 font-bold rounded-lg hover:bg-yellow-200"
-            >
-              Create Account
-            </Link>
-            <Link
-              to="/login"
-              className="px-8 py-4 bg-transparent text-yellow-100 font-bold rounded-lg hover:bg-yellow-800 border-2 border-yellow-200"
-            >
-              Sign In
-            </Link>
-          </div>
+          {!isAuthenticated ? (
+            <>
+              <h2 className="text-4xl md:text-5xl font-bold">Ready to Start?</h2>
+              <p className="text-xl opacity-90">
+                Join thousands of learners today
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/signup"
+                  className="px-8 py-4 bg-yellow-100 text-yellow-900 font-bold rounded-lg hover:bg-yellow-200"
+                >
+                  Create Account
+                </Link>
+                <Link
+                  to="/login"
+                  className="px-8 py-4 bg-transparent text-yellow-100 font-bold rounded-lg hover:bg-yellow-800 border-2 border-yellow-200"
+                >
+                  Sign In
+                </Link>
+              </div>
+            </>
+          ) : (
+            <>
+              <h2 className="text-4xl md:text-5xl font-bold">Welcome back{user?.name ? `, ${user.name}` : ''}!</h2>
+              <p className="text-xl opacity-90">
+                Continue your learning journey and track your progress.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to={nextStepPath}
+                  className="px-8 py-4 bg-yellow-100 text-yellow-900 font-bold rounded-lg hover:bg-yellow-200"
+                >
+                  Continue Learning
+                </Link>
+                <Link
+                  to="/profile"
+                  className="px-8 py-4 bg-transparent text-yellow-100 font-bold rounded-lg hover:bg-yellow-800 border-2 border-yellow-200"
+                >
+                  View Profile
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </section>
     </div>

@@ -6,7 +6,7 @@ import AttemptsPage from "./pages/AttemptsPage";
 import {
   SkeletonStatRow,
   SkeletonChartRow,
-} from "./Components/SharedComponents";
+} from "./components/SharedComponents";
 import { useNavigate } from "react-router-dom";
 
 type NavId = "overview" | "level" | "attempts";

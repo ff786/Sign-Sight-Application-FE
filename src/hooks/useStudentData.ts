@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import type { AttemptsPage, Level } from "../mentor/types";
 //import { BACKEND_BASE_URI } from "../config/CONFIG";
 
-const API = "/api/dashboard"; // proxied by Vite → port 5050
+const API = "/api/dashboard"; // proxied by Vite → port 5080
 
 // ============================================================
 // useStudentAttempts — fetch student's own paginated attempts

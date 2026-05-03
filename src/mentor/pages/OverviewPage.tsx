@@ -20,7 +20,7 @@ import {
   ALL_AREAS,
   /*AreaBar,
   scoreHex*/
-} from "../Components/SharedComponents";
+} from "../components/SharedComponents";
 
 /* ============================================================
    CUSTOM TOOLTIPS

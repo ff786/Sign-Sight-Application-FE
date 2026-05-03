@@ -1,5 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import PrimaryButton from "../../Components/PrimaryButton";
+import PrimaryButton from "../../components/PrimaryButton";
 
 export default function ResultPage() {
   const nav = useNavigate();

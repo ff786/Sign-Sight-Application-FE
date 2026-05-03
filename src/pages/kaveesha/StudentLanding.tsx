@@ -64,7 +64,7 @@ export default function StudentLearningLanding() {
             </button>
           </div>
 
-          <div className="h-px bg-gradient-to-r from-orange-200 via-pink-200 to-orange-200 mb-8" />
+          <div className="h-px bg-yellow-200 mb-8" />
           <div className="grid sm:grid-cols-3 gap-6 mb-12">
             {[
               { id: "basic", emoji: "🌱", color: "orange" },
@@ -78,7 +78,7 @@ export default function StudentLearningLanding() {
                   cursor-pointer p-6 rounded-3xl text-center transition-all
                   bg-white/70 backdrop-blur shadow-lg
                   hover:scale-105
-                  ${level === l.id ? `ring-4 ring-${l.color}-400` : ""}
+                  ${level === l.id ? `ring-4 ring-yellow-600` : ""}
                 `}
               >
                 <div className="text-4xl mb-3">{l.emoji}</div>
@@ -103,8 +103,8 @@ export default function StudentLearningLanding() {
             <button
               onClick={() => nav("/student/attempts")}
               className="px-14 py-4 rounded-full text-lg font-bold
-             bg-gradient-to-r from-blue-500 to-purple-600 text-white border-2 border-blue-600
-             hover:shadow-lg transition"
+             bg-yellow-700 text-white border-2 border-yellow-800
+             hover:bg-yellow-800 transition"
             >
               My Results 📊
             </button>

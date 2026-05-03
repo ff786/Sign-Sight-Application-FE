@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AuthProvider } from './context/AuthContext'
 import UnifiedNavbar from './Components/common/UnifiedNavbar'
-import Footer from './Components/common/Footer'
+import UnifiedFooter from './Components/common/UnifiedFooter'
 import ProtectedRoute from './Components/common/ProtectedRoute'
 
 // Pages
@@ -11,6 +11,7 @@ import UnifiedSignupPage from './pages/auth/UnifiedSignupPage'
 import ProfilePage from './pages/ProfilePage'
 import ConversionPage from './Components/audio-sign/ConversionPage'
 import HomePage from './Components/HomePage/HomePage'
+import AboutUs from './pages/AboutUs'
 
 // Legacy imports
 import MentorLogin from "./pages/kaveesha/MentorLogin";
@@ -109,6 +110,7 @@ function App() {
 
             {/* Legacy Routes */}
             <Route path="/Home" element={<HomePage />} />
+            <Route path="/aboutus" element={<AboutUs />} />
             <Route path="/student/login" element={<StudentLogin />} />
             <Route path="/student/signup" element={<StudentSignUp />} />
             <Route path="/results" element={<Results />} />
@@ -120,7 +122,7 @@ function App() {
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
-        <Footer />
+        <UnifiedFooter />
       </BrowserRouter>
     </AuthProvider>
   );

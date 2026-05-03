@@ -80,7 +80,7 @@ const ConversionPage = () => {
   };
 
   return (
-      <div className="min-h-screen bg-linear-to-br from-yellow-50 via-white to-yellow-100 animate-gradient-slow">
+      <div className="min-h-screen bg-yellow-50">
         {/* Header */}
         {/*<div className="sticky top-0 z-50 backdrop-blur-xl bg-white/80 border-b-2 border-yellow-200 shadow-xl">*/}
         {/*  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">*/}
@@ -130,27 +130,27 @@ const ConversionPage = () => {
         {/* Main Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Instructions */}
-          <div className="mb-12 bg-white rounded-2xl shadow-xl p-8 border-2 border-yellow-100">
+            <div className="mb-12 bg-white rounded-2xl shadow-sm p-8 border border-yellow-100">
             <h2 className="text-2xl font-bold text-yellow-900 mb-6">How It Works</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-linear-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl shadow-md border-2 border-yellow-200 transform hover:scale-105 transition-all duration-300">
-                <div className="w-14 h-14 bg-linear-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+              <div className="bg-yellow-50 p-6 rounded-xl shadow-sm border border-yellow-200 transition-all duration-300">
+                <div className="w-14 h-14 bg-yellow-700 rounded-2xl flex items-center justify-center mb-4 shadow-sm">
                   <span className="text-3xl">📤</span>
                 </div>
                 <h3 className="text-lg font-bold text-yellow-900 mb-2">1. Upload Audio</h3>
                 <p className="text-gray-700 text-sm font-medium">Drag & drop or select an audio/video file (MP3, WAV, MP4)</p>
               </div>
 
-              <div className="bg-linear-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl shadow-md border-2 border-yellow-200 transform hover:scale-105 transition-all duration-300">
-                <div className="w-14 h-14 bg-linear-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+              <div className="bg-yellow-50 p-6 rounded-xl shadow-sm border border-yellow-200 transition-all duration-300">
+                <div className="w-14 h-14 bg-yellow-700 rounded-2xl flex items-center justify-center mb-4 shadow-sm">
                   <span className="text-3xl">⚙️</span>
                 </div>
                 <h3 className="text-lg font-bold text-yellow-900 mb-2">2. AI Processing</h3>
                 <p className="text-gray-700 text-sm font-medium">Our system converts speech to sign language.</p>
               </div>
 
-              <div className="bg-linear-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl shadow-md border-2 border-yellow-200 transform hover:scale-105 transition-all duration-300">
-                <div className="w-14 h-14 bg-linear-to-br from-yellow-500 to-yellow-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
+              <div className="bg-yellow-50 p-6 rounded-xl shadow-sm border border-yellow-200 transition-all duration-300">
+                <div className="w-14 h-14 bg-yellow-700 rounded-2xl flex items-center justify-center mb-4 shadow-sm">
                   <span className="text-3xl">🎬</span>
                 </div>
                 <h3 className="text-lg font-bold text-yellow-900 mb-2">3. View Results</h3>
@@ -178,7 +178,7 @@ const ConversionPage = () => {
 
           {/* Error Display */}
           {error && (
-            <div className="mt-8 p-6 bg-linear-to-r from-red-50 to-pink-50 border-2 border-red-300 rounded-xl shadow-lg animate-shake">
+            <div className="mt-8 p-6 bg-red-50 border border-red-300 rounded-xl shadow-sm animate-shake">
               <h3 className="text-lg font-bold text-red-900 mb-2">⚠️ Conversion Error</h3>
               <p className="text-sm text-red-700 font-semibold">{error}</p>
               <button

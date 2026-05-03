@@ -47,16 +47,16 @@ export default function UnifiedLoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-yellow-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         {/* Card Container */}
         <div className="bg-white rounded-2xl shadow-2xl p-8 border border-yellow-100">
           {/* Logo Section */}
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg shadow-lg mb-4">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-700 rounded-lg shadow-lg mb-4">
               <span className="text-white font-bold text-2xl">🤟</span>
             </div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl font-bold text-yellow-900">
               SignSight
             </h1>
             <p className="text-gray-600 mt-2">
@@ -65,7 +65,7 @@ export default function UnifiedLoginPage() {
           </div>
 
           {/* Role Toggle */}
-          <div className="mb-6 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg border border-yellow-200">
+          <div className="mb-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
             <label className="flex items-center cursor-pointer">
               <input
                 type="checkbox"
@@ -151,7 +151,7 @@ export default function UnifiedLoginPage() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+              className="w-full py-3 bg-yellow-700 text-white font-bold rounded-lg shadow-sm hover:bg-yellow-800 transition-all disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
             >
               {isLoading ? (
                 <>

@@ -62,7 +62,7 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-pink-50 p-8">
+    <div className="min-h-screen bg-yellow-50 p-8">
       {toast && <Toast key={toast.id} message={toast.message} type={toast.type} onClose={hideToast} />}
       <h1 className="text-3xl font-extrabold mb-8 text-center text-gray-800">
         Admin Dashboard
@@ -75,7 +75,7 @@ export default function AdminDashboard() {
           return (
             <div
               key={mentor.id}
-              className="bg-white/70 backdrop-blur-xl rounded-2xl shadow-xl p-6 transition hover:scale-[1.01]"
+                className="bg-white rounded-2xl shadow-sm border border-yellow-100 p-6 transition hover:shadow-md"
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
@@ -89,8 +89,8 @@ export default function AdminDashboard() {
                 <span
                   className={`px-3 py-1 rounded-full text-sm font-semibold ${
                     selected.length >= 5
-                      ? "bg-red-100 text-red-600"
-                      : "bg-green-100 text-green-600"
+                      ? "bg-red-50 text-red-700"
+                      : "bg-yellow-100 text-yellow-800"
                   }`}
                 >
                   {selected.length} / 5
@@ -107,7 +107,7 @@ export default function AdminDashboard() {
                     <label
                       key={user._id}
                       className={`flex items-center gap-3 p-2 rounded-lg cursor-pointer transition ${
-                        checked ? "bg-pink-100" : "hover:bg-gray-100"
+                        checked ? "bg-yellow-100" : "hover:bg-gray-100"
                       } ${disabled ? "opacity-40 cursor-not-allowed" : ""}`}
                     >
                       <input
@@ -128,7 +128,7 @@ export default function AdminDashboard() {
               <button
                 disabled={savingMentor === mentor.id}
                 onClick={() => saveUsers(mentor.id)}
-                className="w-full bg-black text-white py-2 rounded-xl font-semibold transition hover:bg-gray-800 disabled:opacity-50"
+                className="w-full bg-yellow-700 text-white py-2 rounded-xl font-semibold transition hover:bg-yellow-800 disabled:opacity-50"
               >
                 {savingMentor === mentor.id ? "Saving..." : "Save"}
               </button>

@@ -123,7 +123,7 @@ export default function EmotionFlow() {
     <>
       <CameraBubble stream={cameraStreamRef.current} />
 
-      <div className="min-h-screen overflow-hidden bg-gradient-to-br from-peach to-yellow-100 px-4 py-6">
+      <div className="min-h-screen overflow-hidden bg-yellow-50 px-4 py-6">
         <div className="max-w-4xl mx-auto flex flex-col items-center">
           <ProgressIndicator current={step + 1} total={videos.length} />
 

@@ -440,7 +440,7 @@ function DetailPanel({ attempt: att, userId }: { attempt: AttemptDocument; userI
       <div className="flex justify-end">
         <button
           onClick={generateReport}
-          className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-teal-600 hover:from-blue-700 hover:to-teal-700 text-white rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
+          className="flex items-center gap-2 px-4 py-2 bg-yellow-700 hover:bg-yellow-800 text-white rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md"
         >
           <span>📄</span>
           Generate Report

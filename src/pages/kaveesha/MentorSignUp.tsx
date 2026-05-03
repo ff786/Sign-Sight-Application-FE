@@ -66,19 +66,19 @@ export default function MentorSignup() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-peach via-orange-100 to-pink-100">
+    <div className="min-h-screen bg-yellow-50">
       {toast && <Toast key={toast.id} message={toast.message} type={toast.type} onClose={hideToast} />}
       <Navbar />
 
       <section className="relative max-w-xl mx-auto px-4">
         {/* glows */}
-        <div className="absolute top-0 left-12 w-28 h-28 bg-yellow-300/30 blur-2xl rounded-full animate-pulse" />
-        <div className="absolute bottom-24 right-14 w-36 h-36 bg-pink-300/30 blur-2xl rounded-full animate-pulse" />
+        <div className="absolute top-0 left-12 w-28 h-28 bg-yellow-200 rounded-full opacity-40" />
+        <div className="absolute bottom-24 right-14 w-36 h-36 bg-amber-200 rounded-full opacity-40" />
 
-        <div className="relative bg-white/40 backdrop-blur-xl rounded-[2.5rem] shadow-5xl p- sm:p-12">
+        <div className="relative bg-white rounded-[2.5rem] shadow-lg p-8 sm:p-12 border border-yellow-100">
           <h2 className="text-3xl font-extrabold text-center mb-2">
-            <span className="text-orange-600">Mentor</span>{" "}
-            <span className="text-pink-500">Sign Up</span>
+            <span className="text-yellow-800">Mentor</span>{" "}
+            <span className="text-stone-800">Sign Up</span>
           </h2>
 
           <p className="text-center text-gray-700 mb-8">

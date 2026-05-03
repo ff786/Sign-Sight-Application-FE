@@ -22,11 +22,11 @@ function ProfileContent() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-yellow-50 via-white to-orange-50">
+    <div className="min-h-screen bg-yellow-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold text-yellow-900 mb-2">
             My Profile
           </h1>
           <p className="text-gray-600">Manage your account and view your progress</p>
@@ -66,7 +66,7 @@ function ProfileContent() {
               <div className="space-y-3 mt-6">
                 <button
                   onClick={() => setIsEditing(!isEditing)}
-                  className="w-full py-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white font-bold rounded-lg hover:shadow-lg transition-all flex items-center justify-center space-x-2"
+                  className="w-full py-3 bg-yellow-700 text-white font-bold rounded-lg hover:bg-yellow-800 transition-all flex items-center justify-center space-x-2"
                 >
                   <Edit2 size={18} />
                   <span>Edit Profile</span>
@@ -135,7 +135,7 @@ function ProfileContent() {
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-3 overflow-hidden">
                       <div
-                        className="bg-gradient-to-r from-yellow-400 to-orange-500 h-full rounded-full transition-all"
+                        className="bg-yellow-700 h-full rounded-full transition-all"
                         style={{ width: `${item.progress}%` }}
                       ></div>
                     </div>
@@ -151,7 +151,7 @@ function ProfileContent() {
                 {['🌟', '⭐', '🏆', '🎖️', '🥇', '🥈', '🎗️', '✨'].map((badge, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-center p-4 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg border border-yellow-200 hover:shadow-md transition-shadow text-center"
+                    className="flex flex-col items-center p-4 bg-yellow-50 rounded-lg border border-yellow-200 hover:shadow-md transition-shadow text-center"
                   >
                     <span className="text-3xl mb-2">{badge}</span>
                     <p className="text-xs font-semibold text-gray-700">Badge {index + 1}</p>

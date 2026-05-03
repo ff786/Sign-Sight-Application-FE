@@ -42,34 +42,34 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-yellow-50 via-white to-orange-50">
+    <div className="min-h-screen bg-yellow-50 text-stone-900">
       {/* Hero Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6">
             <div className="space-y-2">
-              <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-yellow-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
+              <h1 className="text-5xl md:text-6xl font-bold text-stone-900">
                 Breaking Barriers
               </h1>
-              <p className="text-2xl text-gray-700">
+              <p className="text-2xl text-stone-700">
                 Through Sign Language Technology
               </p>
             </div>
 
-            <p className="text-lg text-gray-600 leading-relaxed max-w-md">
+            <p className="text-lg text-stone-600 leading-relaxed max-w-md">
               SignSight is your comprehensive platform for learning, teaching, and mastering sign language through cutting-edge AI technology.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link
                 to="/signup"
-                className="px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all flex items-center justify-center space-x-2"
+                className="px-8 py-4 bg-yellow-700 text-white font-bold rounded-lg shadow-sm hover:bg-yellow-800 transition-all flex items-center justify-center space-x-2"
               >
                 <span>Start Learning</span>
                 <ArrowRight size={20} />
               </Link>
-              <button className="px-8 py-4 border-2 border-yellow-500 text-yellow-700 font-bold rounded-lg hover:bg-yellow-50 transition-all flex items-center justify-center space-x-2">
+              <button className="px-8 py-4 border-2 border-yellow-700 text-yellow-800 font-bold rounded-lg hover:bg-yellow-100 transition-all flex items-center justify-center space-x-2">
                 <Play size={20} />
                 <span>Watch Demo</span>
               </button>
@@ -77,21 +77,21 @@ export default function LandingPage() {
           </div>
 
           {/* Right Visual */}
-          <div className="relative h-96 bg-gradient-to-br from-yellow-200 to-orange-200 rounded-3xl shadow-2xl flex items-center justify-center group">
-            <div className="text-9xl group-hover:scale-120 transition-transform">🤟</div>
+          <div className="relative h-96 bg-amber-100 border border-amber-200 rounded-3xl shadow-sm flex items-center justify-center group">
+            <div className="text-9xl">🤟</div>
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white py-16">
+      <section className="bg-white py-16 border-y border-yellow-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <div key={index} className="bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-all text-center">
+              <div key={index} className="bg-yellow-50 border border-yellow-200 p-6 rounded-xl shadow-sm text-center">
                 <div className="text-5xl mb-2">{stat.icon}</div>
-                <div className="text-3xl font-bold text-yellow-600">{stat.number}</div>
-                <div className="text-gray-600 text-sm">{stat.label}</div>
+                <div className="text-3xl font-bold text-yellow-800">{stat.number}</div>
+                <div className="text-stone-600 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -101,10 +101,10 @@ export default function LandingPage() {
       {/* Features Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-stone-900 mb-4">
             Powerful Features
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-stone-600">
             Everything you need to excel in sign language
           </p>
         </div>
@@ -114,46 +114,46 @@ export default function LandingPage() {
             <Link
               key={index}
               to={feature.link}
-              className="group relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 border border-gray-100"
+              className="group relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-all border border-yellow-100"
             >
               {feature.badge && (
-                <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-400 text-white text-xs font-bold rounded-full">
+                <div className="absolute top-4 right-4 px-3 py-1 bg-yellow-700 text-white text-xs font-bold rounded-full">
                   {feature.badge}
                 </div>
               )}
 
-              <div className="text-6xl mb-4 group-hover:scale-110 transition-transform">
+              <div className="text-6xl mb-4">
                 {feature.icon}
               </div>
 
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h3 className="text-2xl font-bold text-stone-900 mb-2">
                 {feature.title}
               </h3>
 
-              <p className="text-gray-600 mb-4">
+              <p className="text-stone-600 mb-4">
                 {feature.description}
               </p>
 
-              <div className={`h-1 w-16 bg-gradient-to-r ${feature.color} rounded-full group-hover:w-32 transition-all`}></div>
+              <div className="h-1 w-16 bg-yellow-700 rounded-full"></div>
             </Link>
           ))}
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-gradient-to-r from-yellow-50 to-orange-50 py-16">
+      <section className="bg-yellow-100 py-16 border-t border-yellow-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12">Why Choose SignSight?</h2>
+          <h2 className="text-4xl font-bold text-center mb-12 text-stone-900">Why Choose SignSight?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: 'AI-Powered', desc: 'Machine learning adapts to your pace', icon: <Zap className="w-8 h-8 text-yellow-600" /> },
-              { title: 'Expert Mentors', desc: 'Learn from professional instructors', icon: <Users className="w-8 h-8 text-yellow-600" /> },
-              { title: 'Community', desc: 'Connect with thousands of learners', icon: <Heart className="w-8 h-8 text-yellow-600" /> },
+              { title: 'AI-Powered', desc: 'Machine learning adapts to your pace', icon: <Zap className="w-8 h-8 text-yellow-800" /> },
+              { title: 'Expert Mentors', desc: 'Learn from professional instructors', icon: <Users className="w-8 h-8 text-yellow-800" /> },
+              { title: 'Community', desc: 'Connect with thousands of learners', icon: <Heart className="w-8 h-8 text-yellow-800" /> },
             ].map((benefit, index) => (
-              <div key={index} className="bg-white p-8 rounded-xl shadow-md text-center">
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm text-center border border-yellow-100">
                 <div className="flex justify-center mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-bold mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.desc}</p>
+                <p className="text-stone-600">{benefit.desc}</p>
               </div>
             ))}
           </div>
@@ -161,7 +161,7 @@ export default function LandingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 py-16 text-white">
+      <section className="bg-yellow-900 py-16 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
           <h2 className="text-4xl md:text-5xl font-bold">Ready to Start?</h2>
           <p className="text-xl opacity-90">
@@ -170,13 +170,13 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/signup"
-              className="px-8 py-4 bg-white text-orange-600 font-bold rounded-lg hover:bg-gray-100"
+              className="px-8 py-4 bg-yellow-100 text-yellow-900 font-bold rounded-lg hover:bg-yellow-200"
             >
               Create Account
             </Link>
             <Link
               to="/login"
-              className="px-8 py-4 bg-white bg-opacity-20 text-white font-bold rounded-lg hover:bg-opacity-30 border-2 border-white"
+              className="px-8 py-4 bg-transparent text-yellow-100 font-bold rounded-lg hover:bg-yellow-800 border-2 border-yellow-200"
             >
               Sign In
             </Link>

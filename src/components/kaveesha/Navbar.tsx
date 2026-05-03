@@ -1,5 +1,7 @@
+
 import { useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
+import logoSignSight from '../../assets/logo-sign-sight.webp';
 
 export default function Navbar() {
   const nav = useNavigate();
@@ -17,7 +19,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="w-full bg-gradient-to-r from-orange-400 via-pink-400 to-yellow-400 shadow-lg">
+    <nav className="w-full bg-yellow-500 shadow-md border-b border-yellow-600">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo */}
@@ -25,8 +27,8 @@ export default function Navbar() {
           className="flex items-center gap-3 cursor-pointer"
           onClick={() => nav("/student/landing")}
         >
-          <div className="bg-white/30 backdrop-blur rounded-full p-2">
-            <img src="/images/logo.png" alt="SignSight Logo" className="w-8 h-8 rounded-full" />
+            <div className="bg-white/30 rounded-full p-2">
+             <img src={logoSignSight} alt="SignSight Logo" className="w-8 h-8 rounded-full" />
           </div>
           <h1 className="text-white text-2xl font-extrabold tracking-wide">SignSight</h1>
         </div>
@@ -71,7 +73,7 @@ export default function Navbar() {
                   <span className="text-xl">🎓</span>
                   <span>Mentor Login</span>
                 </button>
-                <div className="h-px bg-gradient-to-r from-orange-100 via-pink-100 to-yellow-100" />
+                <div className="h-px bg-yellow-100" />
                 <button
                   onClick={() => { nav("/admin/login"); setPortalOpen(false); }}
                   className="w-full px-5 py-3 text-left font-semibold text-pink-600 hover:bg-pink-50 transition-colors flex items-center gap-3"
@@ -87,7 +89,7 @@ export default function Navbar() {
         {/* CTA */}
         <button
           onClick={() => nav("/instructions")}
-          className="ml-4 px-6 py-2 bg-white text-orange-500 rounded-full font-bold shadow-md hover:scale-105 active:scale-95 transition"
+          className="ml-4 px-6 py-2 bg-white text-yellow-700 rounded-full font-bold shadow-sm hover:bg-yellow-50 active:scale-95 transition"
         >
           Start 🌈
         </button>

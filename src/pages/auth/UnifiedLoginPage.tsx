@@ -4,6 +4,7 @@ import { Mail, Lock, Eye, EyeOff, Loader2 } from 'lucide-react';
 import axios from 'axios';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase';
+import { useAuth } from '../../context/AuthContext';
 
 export default function UnifiedLoginPage() {
   const [isMentor, setIsMentor] = useState(false);
@@ -13,6 +14,7 @@ export default function UnifiedLoginPage() {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const { login: authLogin } = useAuth();
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -26,9 +28,15 @@ export default function UnifiedLoginPage() {
       }
       if (isMentor) {
         // Mentor login: use email directly
-        await signInWithEmailAndPassword(auth, emailOrUsername, password);
-        localStorage.clear();
+        console.log('Attempting mentor login with email:', emailOrUsername);
+        const userCredential = await signInWithEmailAndPassword(auth, emailOrUsername, password);
+        console.log('Mentor login successful:', userCredential.user.email);
+        
+        // Update AuthContext
+        await authLogin(emailOrUsername, 'mentor');
         localStorage.setItem('mentorEmail', emailOrUsername);
+        
+        console.log('Navigating to /mentorDash');
         navigate('/mentorDash');
       } else {
         // Student login: lookup by username, then login with email
@@ -39,14 +47,18 @@ export default function UnifiedLoginPage() {
           return;
         }
         await signInWithEmailAndPassword(auth, studentData.email, password);
-        localStorage.clear();
+        
+        // Update AuthContext
+        await authLogin(studentData.email, 'student');
         localStorage.setItem('studentName', studentData.username);
         localStorage.setItem('studentUserId', studentData._id);
         localStorage.setItem('studentFullName', studentData.name);
         localStorage.setItem('studentEmail', studentData.email);
+        
         navigate('/student/landing');
       }
     } catch (err) {
+      console.error('Login error:', err);
       setError(getFirebaseErrorMessage(err));
     } finally {
       setIsLoading(false);
@@ -195,6 +207,18 @@ export default function UnifiedLoginPage() {
               Create one now
             </Link>
           </p>
+
+          {/* Admin Login Button */}
+          <div className="mt-4">
+            <button
+              onClick={() => navigate('/admin/login')}
+              className="w-full py-3 bg-gray-800 text-white font-bold rounded-lg shadow-sm hover:bg-gray-900 transition-all flex items-center justify-center space-x-2"
+            >
+              <span>🛡️</span>
+              <span>Admin Login</span>
+            </button>
+          </div>
+
           <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200 text-xs text-blue-700">
             <p className="font-semibold mb-1">Demo Credentials:</p>
             <p>Email: demo@example.com</p>

@@ -1,70 +1,96 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Mail, Lock, Eye, EyeOff, Loader2 } from 'lucide-react';
-import { useAuth } from '../../context/AuthContext';
+import axios from 'axios';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../../firebase';
 
 export default function UnifiedLoginPage() {
   const [isMentor, setIsMentor] = useState(false);
-  const [email, setEmail] = useState('');
+  const [emailOrUsername, setEmailOrUsername] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const { login } = useAuth();
   const navigate = useNavigate();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     setError('');
     setIsLoading(true);
-
     try {
-      if (!email || !password) {
+      if (!emailOrUsername || !password) {
         setError('Please fill in all fields');
+        setIsLoading(false);
         return;
       }
-
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        setError('Please enter a valid email');
-        return;
-      }
-
-      const role = isMentor ? 'mentor' : 'student';
-      await login(email, role);
-
-      // Redirect based on role
       if (isMentor) {
+        // Mentor login: use email directly
+        await signInWithEmailAndPassword(auth, emailOrUsername, password);
+        localStorage.clear();
+        localStorage.setItem('mentorEmail', emailOrUsername);
         navigate('/mentorDash');
       } else {
+        // Student login: lookup by username, then login with email
+        const { data: studentData } = await axios.get(`/api/students/by-username/${emailOrUsername}`);
+        if (!studentData) {
+          setError('Username not found 👀');
+          setIsLoading(false);
+          return;
+        }
+        await signInWithEmailAndPassword(auth, studentData.email, password);
+        localStorage.clear();
+        localStorage.setItem('studentName', studentData.username);
+        localStorage.setItem('studentUserId', studentData._id);
+        localStorage.setItem('studentFullName', studentData.name);
+        localStorage.setItem('studentEmail', studentData.email);
         navigate('/student/landing');
       }
     } catch (err) {
-      setError('Login failed. Please try again.');
-      console.error(err);
+      setError(getFirebaseErrorMessage(err));
     } finally {
       setIsLoading(false);
     }
-  };
+  }
+
+  function getFirebaseErrorMessage(error: any) {
+    // Axios HTTP errors (e.g. 404 username not found)
+    if (error?.response) {
+      const status = error.response.status;
+      if (status === 404) return 'Username not found 👀';
+      if (status === 500) return 'Server error. Try again later 🌐';
+      return error.response.data?.message || 'Login failed. Please try again 😕';
+    }
+    const code = error?.code || '';
+    switch (code) {
+      case 'auth/user-not-found':
+        return isMentor ? 'No mentor account found 👀' : 'No account found 👀';
+      case 'auth/wrong-password':
+        return 'Incorrect password 🔑';
+      case 'auth/invalid-email':
+        return isMentor ? 'Invalid email address ✉️' : 'Invalid credentials ✉️';
+      case 'auth/network-request-failed':
+        return 'Network error. Try again 🌐';
+      case 'auth/too-many-requests':
+        return 'Too many attempts. Try again later ⏰';
+      default:
+        return 'Login failed. Please try again 😕';
+    }
+  }
 
   return (
     <div className="min-h-screen bg-yellow-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
-        {/* Card Container */}
         <div className="bg-white rounded-2xl shadow-2xl p-8 border border-yellow-100">
-          {/* Logo Section */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-yellow-700 rounded-lg shadow-lg mb-4">
               <span className="text-white font-bold text-2xl">🤟</span>
             </div>
-            <h1 className="text-3xl font-bold text-yellow-900">
-              SignSight
-            </h1>
+            <h1 className="text-3xl font-bold text-yellow-900">SignSight</h1>
             <p className="text-gray-600 mt-2">
               {isMentor ? 'Mentor Portal' : 'Student Login'}
             </p>
           </div>
-
-          {/* Role Toggle */}
           <div className="mb-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
             <label className="flex items-center cursor-pointer">
               <input
@@ -81,39 +107,30 @@ export default function UnifiedLoginPage() {
               {isMentor ? 'Are you a student instead?' : 'Are you a mentor instead?'}
             </p>
           </div>
-
-          {/* Error Message */}
           {error && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start space-x-3">
               <span className="text-red-500 text-xl">⚠️</span>
               <p className="text-red-700 text-sm">{error}</p>
             </div>
           )}
-
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
-            {/* Email Input */}
+          <form onSubmit={handleLogin} className="space-y-4">
             <div className="space-y-2">
               <label className="block text-sm font-semibold text-gray-700">
-                Email Address
+                {isMentor ? 'Email Address' : 'Username'}
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-3 text-yellow-600" size={20} />
                 <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="your@email.com"
+                  type={isMentor ? 'email' : 'text'}
+                  value={emailOrUsername}
+                  onChange={(e) => setEmailOrUsername(e.target.value)}
+                  placeholder={isMentor ? 'your@email.com' : 'student username'}
                   className="w-full pl-10 pr-4 py-3 border-2 border-yellow-200 rounded-lg focus:border-yellow-500 focus:outline-none transition-colors"
                 />
               </div>
             </div>
-
-            {/* Password Input */}
             <div className="space-y-2">
-              <label className="block text-sm font-semibold text-gray-700">
-                Password
-              </label>
+              <label className="block text-sm font-semibold text-gray-700">Password</label>
               <div className="relative">
                 <Lock className="absolute left-3 top-3 text-yellow-600" size={20} />
                 <input
@@ -132,8 +149,6 @@ export default function UnifiedLoginPage() {
                 </button>
               </div>
             </div>
-
-            {/* Remember & Forgot */}
             <div className="flex items-center justify-between text-sm">
               <label className="flex items-center">
                 <input
@@ -146,8 +161,6 @@ export default function UnifiedLoginPage() {
                 Forgot password?
               </Link>
             </div>
-
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={isLoading}
@@ -166,44 +179,28 @@ export default function UnifiedLoginPage() {
               )}
             </button>
           </form>
-
-          {/* Divider */}
           <div className="my-6 flex items-center">
             <div className="flex-1 border-t border-gray-300"></div>
             <div className="px-3 text-gray-500 text-sm">or</div>
             <div className="flex-1 border-t border-gray-300"></div>
           </div>
-
-          {/* Social Logins */}
           <div className="grid grid-cols-3 gap-3">
-            <button className="py-2 border-2 border-gray-200 rounded-lg hover:border-yellow-400 hover:bg-yellow-50 transition-all text-xl">
-              👤
-            </button>
-            <button className="py-2 border-2 border-gray-200 rounded-lg hover:border-yellow-400 hover:bg-yellow-50 transition-all text-xl">
-              f
-            </button>
-            <button className="py-2 border-2 border-gray-200 rounded-lg hover:border-yellow-400 hover:bg-yellow-50 transition-all text-xl">
-              G
-            </button>
+            <button className="py-2 border-2 border-gray-200 rounded-lg hover:border-yellow-400 hover:bg-yellow-50 transition-all text-xl">👤</button>
+            <button className="py-2 border-2 border-gray-200 rounded-lg hover:border-yellow-400 hover:bg-yellow-50 transition-all text-xl">f</button>
+            <button className="py-2 border-2 border-gray-200 rounded-lg hover:border-yellow-400 hover:bg-yellow-50 transition-all text-xl">G</button>
           </div>
-
-          {/* Signup Link */}
           <p className="text-center text-gray-600 mt-6">
             Don't have an account?{' '}
             <Link to="/signup" className="text-yellow-600 font-bold hover:text-yellow-700">
               Create one now
             </Link>
           </p>
-
-          {/* Demo Credentials */}
           <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-200 text-xs text-blue-700">
             <p className="font-semibold mb-1">Demo Credentials:</p>
             <p>Email: demo@example.com</p>
             <p>Password: password123</p>
           </div>
         </div>
-
-        {/* Footer Link */}
         <div className="text-center mt-6">
           <Link to="/" className="text-gray-600 hover:text-yellow-600 font-medium">
             ← Back to Home

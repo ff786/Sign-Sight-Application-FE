@@ -8,10 +8,10 @@ interface ToastProps {
   onClose: () => void;
 }
 
-const CONFIG: Record<ToastType, { gradient: string; icon: string }> = {
-  success: { gradient: "from-orange-400 to-yellow-400",           icon: "✅" },
-  error:   { gradient: "from-pink-500 to-red-400",                icon: "❌" },
-  info:    { gradient: "from-orange-400 via-pink-400 to-yellow-300", icon: "💡" },
+const CONFIG: Record<ToastType, { color: string; icon: string }> = {
+  success: { color: "bg-yellow-700", icon: "✅" },
+  error:   { color: "bg-red-500", icon: "❌" },
+  info:    { color: "bg-yellow-600", icon: "💡" },
 };
 
 export default function Toast({ message, type = "info", onClose }: ToastProps) {
@@ -25,7 +25,7 @@ export default function Toast({ message, type = "info", onClose }: ToastProps) {
 
   function close() { setVisible(false); setTimeout(onClose, 300); }
 
-  const { gradient, icon } = CONFIG[type];
+  const { color, icon } = CONFIG[type];
 
   return (
     <div
@@ -37,7 +37,7 @@ export default function Toast({ message, type = "info", onClose }: ToastProps) {
           : "opacity-0 -translate-x-1/2 -translate-y-3"}
       `}
     >
-      <div className={`bg-gradient-to-r ${gradient} text-white font-semibold pl-5 pr-4 py-3.5 rounded-full shadow-2xl flex items-center gap-3 min-w-[240px] max-w-sm`}>
+      <div className={`${color} text-white font-semibold pl-5 pr-4 py-3.5 rounded-full shadow-lg flex items-center gap-3 min-w-[240px] max-w-sm`}>
         <span className="text-xl shrink-0">{icon}</span>
         <span className="flex-1 text-sm leading-snug">{message}</span>
         <button

@@ -14,10 +14,7 @@ export default function ProgressIndicator({ current, total }: Props) {
       </div>
 
       <div className="h-4 bg-white/50 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-orange-400 to-pink-500 transition-all"
-          style={{ width: `${percent}%` }}
-        />
+        <div className="h-full bg-yellow-700 transition-all" style={{ width: `${percent}%` }} />
       </div>
     </div>
   );

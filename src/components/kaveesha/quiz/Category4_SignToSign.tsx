@@ -128,14 +128,14 @@ export default function Category4_SignToSign({
   const isYouTube = question.question_video?.includes('youtube.com') || question.question_video?.includes('youtu.be');
 
   return (
-    <div className="min-h-[100dvh] bg-gradient-to-br from-peach via-orange-100 to-pink-100 px-6 py-8">
+    <div className="min-h-[100dvh] bg-yellow-50 px-6 py-8">
       <h2 className="text-center text-lg font-bold text-gray-800 mb-6">
         {question.instruction}
       </h2>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* LEFT */}
-        <div className="bg-white/80 rounded-3xl shadow-xl p-5">
+        <div className="bg-white rounded-3xl shadow-lg p-5 border border-yellow-100">
           {isYouTube ? (
             <YoutubePlayer url={question.question_video} />
           ) : (

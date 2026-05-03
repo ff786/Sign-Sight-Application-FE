@@ -48,9 +48,7 @@ export default function Category1_MCQ({ question, onNext }: any) {
         <button
           disabled={!selected}
           onClick={onNext}
-          className="px-16 py-4 rounded-full text-base font-bold text-white
-                     bg-gradient-to-r from-orange-500 to-pink-500
-                     disabled:opacity-40"
+          className="px-16 py-4 rounded-full text-base font-bold text-white bg-yellow-700 hover:bg-yellow-800 disabled:opacity-40"
         >
           Next →
         </button>

@@ -35,10 +35,10 @@ export default function Category2_TextToVideo({
   }
 
   return (
-    <div className="h-[100dvh] bg-gradient-to-br from-peach via-orange-100 to-pink-100 flex flex-col">
+    <div className="h-[100dvh] bg-yellow-50 flex flex-col">
       {/* QUESTION */}
       <div className="pt-6 pb-3 text-center">
-        <h2 className="text-xl font-bold text-pink-500">
+        <h2 className="text-xl font-bold text-yellow-800">
           {question.question}
         </h2>
 
@@ -48,7 +48,7 @@ export default function Category2_TextToVideo({
             <div
               key={i}
               className={`w-3 h-3 rounded-full transition
-                ${i === activeIndex ? "bg-pink-500 scale-110" : "bg-pink-200"}`}
+                ${i === activeIndex ? "bg-yellow-700 scale-110" : "bg-yellow-200"}`}
             />
           ))}
         </div>
@@ -58,7 +58,7 @@ export default function Category2_TextToVideo({
       <div className="flex-1 px-6 flex items-center justify-center">
         <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-[1fr_220px] gap-6">
           {/* MAIN VIDEO */}
-          <div className="bg-white/10 backdrop-blur-xl rounded-[2rem] shadow-2xl p-2 flex flex-col ring-4 ring-pink-300 max-h-[80vh]">
+            <div className="bg-white rounded-[2rem] shadow-lg p-2 flex flex-col ring-4 ring-yellow-200 max-h-[80vh]">
             <iframe
               src={toYoutubeEmbed(activeOption.video)}
               className="w-full aspect-video rounded-2xl max-h-[60vh]"
@@ -71,8 +71,8 @@ export default function Category2_TextToVideo({
                 mt-4 py-2 px-6 rounded-full text-base font-bold
                 transition-all duration-300 w-[800px] max-w-full text-center ml-[2.8rem]
                 ${selectedIndex === activeIndex
-                  ? "bg-green-500 text-white scale-105"
-                  : "bg-pink-500 text-white hover:bg-pink-600 hover:scale-105"
+                  ? "bg-yellow-700 text-white scale-105"
+                  : "bg-yellow-600 text-white hover:bg-yellow-700 hover:scale-105"
                 }
               `}
             >
@@ -83,7 +83,7 @@ export default function Category2_TextToVideo({
           </div>
 
           {/* RIGHT VIDEO RAIL */}
-          <div className="hidden lg:flex flex-col gap-3 bg-white/60 backdrop-blur-xl rounded-[2rem] shadow-xl p-3">
+          <div className="hidden lg:flex flex-col gap-3 bg-white rounded-[2rem] shadow-lg p-3 border border-yellow-100">
             {question.options.map((opt: any, i: number) => (
               <button
                 key={opt.id}
@@ -92,7 +92,7 @@ export default function Category2_TextToVideo({
                   relative rounded-xl overflow-hidden aspect-video
                   transition-all duration-300
                   ${i === activeIndex
-                    ? "ring-4 ring-pink-400 scale-105"
+                    ? "ring-4 ring-yellow-600 scale-105"
                     : "opacity-70 hover:opacity-100 hover:scale-105"
                   }
                 `}
@@ -103,7 +103,7 @@ export default function Category2_TextToVideo({
                 />
 
                 {selectedIndex === i && (
-                  <div className="absolute inset-0 bg-green-500/40 flex items-center justify-center text-white text-3xl font-extrabold">
+                  <div className="absolute inset-0 bg-yellow-700/40 flex items-center justify-center text-white text-3xl font-extrabold">
                     ✓
                   </div>
                 )}
@@ -120,7 +120,7 @@ export default function Category2_TextToVideo({
           onClick={onNext}
           className="
             px-24 py-4 rounded-full text-base font-bold
-            bg-gradient-to-r from-pink-500 to-orange-500
+            bg-yellow-700
             text-white shadow-xl
             disabled:opacity-40 disabled:cursor-not-allowed
             hover:scale-105 transition-all

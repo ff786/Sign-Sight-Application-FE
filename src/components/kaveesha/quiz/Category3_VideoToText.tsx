@@ -34,11 +34,11 @@ export default function Category3_VideoToText({
   const isYouTube = question.question_video?.includes('youtube.com') || question.question_video?.includes('youtu.be');
 
   return (
-    <div className="h-[100dvh] flex flex-col bg-gradient-to-br from-peach via-orange-100 to-pink-100">
+    <div className="h-[100dvh] flex flex-col bg-yellow-50">
       <div className="flex-1 flex items-center px-6">
         <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10">
           {/* VIDEO */}
-          <div className="bg-white/70 backdrop-blur-xl rounded-3xl shadow-lg p-4">
+            <div className="bg-white rounded-3xl shadow-lg p-4 border border-yellow-100">
             <p className="text-center text-sm text-gray-600 mb-3">
               Watch the sign and choose the correct answer
             </p>
@@ -68,8 +68,8 @@ export default function Category3_VideoToText({
                   w-full px-6 py-4 rounded-full text-base font-semibold text-left
                   transition-all
                   ${selected === opt.id
-                    ? "bg-purple-500 text-white shadow-lg scale-[1.02]"
-                    : "bg-white hover:bg-purple-50"
+                    ? "bg-yellow-700 text-white shadow-lg scale-[1.02]"
+                    : "bg-white hover:bg-yellow-50"
                   }
                 `}
               >
@@ -81,13 +81,13 @@ export default function Category3_VideoToText({
       </div>
 
       {/* NEXT */}
-      <div className="bg-white/90 border-t py-4 flex justify-center">
+      <div className="bg-white border-t border-yellow-100 py-4 flex justify-center">
         <button
           disabled={!selected}
           onClick={onNext}
           className={`px-20 py-4 rounded-full text-base font-bold
             ${selected
-              ? "bg-purple-500 text-white hover:bg-purple-600"
+              ? "bg-yellow-700 text-white hover:bg-yellow-800"
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
             }`}
         >

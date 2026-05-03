@@ -2,12 +2,12 @@
 type Props = {
   emoji: string
   label: string
-  gradient: string
+  tone: string
 }
 
-export default function EmotionTile({ emoji, label, gradient }: Props) {
+export default function EmotionTile({ emoji, label, tone }: Props) {
   return (
-    <div className={`emotion-tile bg-gradient-to-br ${gradient}`}>
+    <div className={`emotion-tile ${tone}`}>
       <span className="text-4xl">{emoji}</span>
       {label}
     </div>

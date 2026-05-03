@@ -15,7 +15,7 @@ export default function Navbar() {
     { name: 'Audio-Sign Conversion', path: '/convert' },
     { name: 'Sign Learning', path: '/lessons', requiresAuth: true },
     { name: 'Emotions Detection', path: '/emotion_landing' },
-    { name: 'Live Sign Detection', path: '/detection' },
+    { name: 'Live Sign Detection', path: '/Dynamic-Home' },
     { name: 'About Us', path: '/aboutus' },
   ];
 

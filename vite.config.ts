@@ -1,9 +1,12 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-
+import tailwindcss from '@tailwindcss/vite'
+// Use plugin-react (esbuild/babel) instead of react-swc: avoids "@swc/core Failed to load native binding"
+// on some Node / Windows setups; performance impact is negligible for dev.
+import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  plugins: [react()],
+  // Tailwind v4 official Vite plugin — avoids PostCSS + lightningcss optional-deps breakage on npm/Windows.
+  plugins: [tailwindcss(), react()],
   server: {
     proxy: {
       "/api": {

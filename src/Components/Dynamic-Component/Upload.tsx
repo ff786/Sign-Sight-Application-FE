@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { SIGN_SIGHT_ML_BASE_URI } from "../../config/CONFIG";
 
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap');
@@ -408,7 +409,7 @@ const Upload: React.FC = () => {
         setLoading(true); setError(null); setResult(null);
         const formData = new FormData(); formData.append("video", file);
         try {
-            const response = await fetch("http://localhost:5000/predict_video", { method: "POST", body: formData });
+            const response = await fetch(`${SIGN_SIGHT_ML_BASE_URI}/predict_video`, { method: "POST", body: formData });
             if (!response.ok) { const d = await response.json(); throw new Error(d.error || "Failed to process video"); }
             setResult(await response.json());
         } catch (err: any) { setError(err.message); }

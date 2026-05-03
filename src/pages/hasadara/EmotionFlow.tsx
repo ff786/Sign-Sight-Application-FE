@@ -11,6 +11,8 @@ import {
   exitFullscreen,
 } from "../../utils/hasadara/fullscreen";
 
+import { BACKEND_BASE_URI } from "../../config/CONFIG";
+
 // happy: https://www.youtube.com/embed/bON-KPiiNCk
 // sad: https://www.youtube.com/embed/0yBnIUX0QAE 
 // angry: https://www.youtube.com/embed/0yBnIUX0QAE (placeholder for now)
@@ -89,7 +91,7 @@ export default function EmotionFlow() {
       formData.append("step", step.toString());
       formData.append("video", blob, `emotion_${step}.webm`);
 
-      fetch("http://localhost:5000/upload-emotion-video", {
+      fetch(`${BACKEND_BASE_URI}/upload-emotion-video`, {
         method: "POST",
         body: formData,
       });

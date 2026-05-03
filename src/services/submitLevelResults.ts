@@ -1,3 +1,5 @@
+import { BACKEND_BASE_URI } from "../config/CONFIG";
+
 export async function submitLevelResults({
   user_id,
   level,
@@ -20,7 +22,7 @@ export async function submitLevelResults({
 
   console.log("FormData ready →", [...formData.entries()]);
 
-  const res = await fetch("http://localhost:5000/api/quiz/submit", {
+  const res = await fetch(`${BACKEND_BASE_URI}/api/quiz/submit`, {
     method: "POST",
     body: formData,
   });

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { SIGN_SIGHT_ML_BASE_URI } from '../../config/CONFIG';
 
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap');
@@ -1059,7 +1060,7 @@ const RealTime = () => {
         try {
             const formData = new FormData();
             formData.append("video", blob, "clip.webm");
-            const response = await fetch("http://localhost:5000/predict_video", {
+            const response = await fetch(`${SIGN_SIGHT_ML_BASE_URI}/predict_video`, {
                 method: "POST",
                 body: formData
             });
@@ -1097,43 +1098,36 @@ const RealTime = () => {
         }
     };
 
-    const resetSequence = async () => {
-        try {
-            const response = await fetch("http://localhost:5000/reset_sequence", { method: "POST" });
-            if (response.ok) {
-                setDetectedSequence([]);
-                setEnglishSentence("");
-                setTamilSentence("");
-                setContextSuggestions([]);
-            }
-        } catch { /* silently ignore */ }
+    /** Local reset — inference API (`jeranapp.py`) has no session; clear UI state only. */
+    const resetSequence = () => {
+        setDetectedSequence([]);
+        setEnglishSentence("");
+        setTamilSentence("");
+        setContextSuggestions([]);
     };
 
-    const getContextSuggestions = async () => {
-        try {
-            const response = await fetch("http://localhost:5000/get_context_suggestions");
-            if (response.ok) {
-                const data = await response.json();
-                setContextSuggestions(data.context_suggestions || []);
-            }
-        } catch { /* silently ignore */ }
+    /** Placeholder contexts for UI — pair with detections via `generateSentenceForContext`. */
+    const getContextSuggestions = () => {
+        setContextSuggestions(["general", "greeting", "formal"]);
     };
 
     // FIX 8b: Explicit string type for context parameter
-    const generateSentenceForContext = async (context: string) => {
-        try {
-            const response = await fetch("http://localhost:5000/generate_sentence", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ context })
-            });
-            if (response.ok) {
-                const data = await response.json();
-                setEnglishSentence(data.english_sentence);
-                setTamilSentence(data.tamil_sentence);
-                setSelectedContext(context);
-            }
-        } catch { /* silently ignore */ }
+    const generateSentenceForContext = (context: string) => {
+        setSelectedContext(context);
+        const pending =
+            !prediction ||
+            prediction === "Waiting for sign..." ||
+            prediction === "Detecting..." ||
+            prediction === "Error in detection" ||
+            prediction === "Connection failed";
+        if (!pending) {
+            setDetectedSequence([prediction]);
+            setEnglishSentence(prediction);
+            setTamilSentence(tamilPrediction || "");
+        } else {
+            setEnglishSentence(`Record a sign first, then pick context: ${context}`);
+            setTamilSentence("");
+        }
     };
 
     const progressPct = `${(recordSeconds / RECORD_DURATION_SECONDS) * 100}%`;

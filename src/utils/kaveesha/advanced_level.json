@@ -1901,70 +1901,70 @@
         "area": "actions",
         "question_video": "/images/signs/where are you from.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Answer where you are from using sign language."
+        "expected_output": "good"
       },
       {
         "id": "A-C4-2",
         "area": "actions",
         "question_video": "/images/signs/When can I learn to sign.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Respond to the question using a signed sentence."
+        "expected_output": "eat"
       },
       {
         "id": "A-C4-3",
         "area": "actions",
         "question_video": "/images/signs/How well do you sign.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Answer how well you sign."
+        "expected_output": "drink"
       },
       {
         "id": "A-C4-4",
         "area": "actions",
         "question_video": "/images/signs/For School.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Sign a short response about school."
+        "expected_output": "mother"
       },
       {
         "id": "A-C4-5",
         "area": "objects",
         "question_video": "/images/signs/He wants an animal that has.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Describe the animal idea in sign language."
+        "expected_output": "man"
       },
       {
         "id": "A-C4-6",
         "area": "actions",
         "question_video": "/images/signs/where are you from.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Answer where you are from using sign language."
+        "expected_output": "run"
       },
       {
         "id": "A-C4-7",
         "area": "actions",
         "question_video": "/images/signs/When can I learn to sign.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Respond to the question using a signed sentence."
+        "expected_output": "yellow"
       },
       {
         "id": "A-C4-8",
         "area": "actions",
         "question_video": "/images/signs/How well do you sign.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Answer how well you sign."
+        "expected_output": "white"
       },
       {
         "id": "A-C4-9",
         "area": "actions",
         "question_video": "/images/signs/For School.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Sign a short response about school."
+        "expected_output": "beautiful"
       },
       {
         "id": "A-C4-10",
         "area": "objects",
         "question_video": "/images/signs/He wants an animal that has.mp4",
         "instruction": "Watch the video and record your response using sign language.",
-        "expected_output": "Describe the animal idea in sign language."
+        "expected_output": "hello"
       }
     ]
   }

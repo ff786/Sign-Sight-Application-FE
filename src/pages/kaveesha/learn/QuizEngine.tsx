@@ -169,6 +169,19 @@ export default function QuizEngine() {
   const category = order[catIndex];
   const question = data.categories[category][qIndex];
 
+  // Calculate total questions and current question number
+  const totalQuestions = order.reduce(
+    (sum, cat) => sum + data.categories[cat].length,
+    0
+  );
+
+  const currentQuestionNumber = order.slice(0, catIndex).reduce(
+    (sum, cat) => sum + data.categories[cat].length,
+    0
+  ) + qIndex + 1;
+
+  const progressPercentage = (currentQuestionNumber / totalQuestions) * 100;
+
   const props = {
     question,
     level,
@@ -233,20 +246,66 @@ export default function QuizEngine() {
       {isLoading && <FullScreenLoader />}
 
       <GlassPage>
-        {
-          {
-            category_1: <Category1_MCQ {...props} />,
-            category_2: <Category2_TextToVideo {...props} />,
-            category_3: <Category3_VideoToText {...props} />,
-            category_4: (
-              <Category4_SignToSign {...props} onVideoRecorded={setCat4File} />
-            ),
-          }[order[catIndex]]
-        }
+        {/* Back to Dashboard Button */}
+        <div className="max-w-4xl mx-auto px-6 pt-6 pb-0">
+          <button
+            onClick={() => navigate("/student/landing")}
+            className="px-6 py-2 bg-white/70 backdrop-blur-lg rounded-full text-gray-800 font-semibold hover:bg-white/90 transition-all shadow-md flex items-center gap-2"
+          >
+            ← Back to Learning
+          </button>
+        </div>
 
-        {error && (
-          <p className="mt-4 text-center text-sm text-red-400">{error}</p>
-        )}
+        {/* Progress Indicator */}
+        <div className="max-w-4xl mx-auto px-6 py-8">
+          <div className="bg-white/50 backdrop-blur-xl rounded-2xl p-6 mb-8 shadow-lg">
+            <div className="flex justify-between items-center mb-4">
+              <div>
+                <p className="text-sm text-gray-600 font-medium">Progress</p>
+                <p className="text-2xl font-bold text-orange-600">
+                  Question {currentQuestionNumber} of {totalQuestions}
+                </p>
+              </div>
+              <div className="text-right">
+                <p className="text-sm text-gray-600 font-medium">Remaining</p>
+                <p className="text-2xl font-bold text-pink-600">
+                  {totalQuestions - currentQuestionNumber} more
+                </p>
+              </div>
+            </div>
+
+            {/* Progress Bar */}
+            <div className="w-full bg-gray-300 rounded-full h-3 overflow-hidden">
+              <div
+                className="bg-gradient-to-r from-orange-500 to-pink-500 h-full rounded-full transition-all duration-300"
+                style={{ width: `${progressPercentage}%` }}
+              />
+            </div>
+
+            {/* Percentage */}
+            <p className="text-right mt-2 text-sm font-semibold text-gray-700">
+              {Math.round(progressPercentage)}% Complete
+            </p>
+          </div>
+        </div>
+
+        {/* Quiz Content */}
+        <div className="max-w-4xl mx-auto px-6 pb-8">
+          {
+            {
+              category_1: <Category1_MCQ {...props} />,
+              category_2: <Category2_TextToVideo {...props} />,
+              category_3: <Category3_VideoToText {...props} />,
+              category_4: (
+                <Category4_SignToSign {...props} onVideoRecorded={setCat4File} />
+              ),
+            }[order[catIndex]]
+          }
+
+          {error && (
+            <p className="mt-4 text-center text-sm text-red-400">{error}</p>
+          )}
+        </div>
       </GlassPage>
     </>
   );

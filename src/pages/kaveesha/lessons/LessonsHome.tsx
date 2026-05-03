@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LessonBackground from "../../../Components/ui/LessonBackground";
 import CategoryIntroModal from "../../../Components/kaveesha/lessons/CategoryIntroModal";
-import Navbar from "../../../Components/kaveesha/Navbar";
 
 type Category = "colors" | "food" | "numbers";
 
@@ -45,9 +44,18 @@ export default function LessonsHome() {
 
   return (
     <>
-      <Navbar />
       <LessonBackground>
         <div className="min-h-screen flex flex-col items-center justify-center px-6">
+          {/* BACK BUTTON */}
+          <div className="w-full max-w-7xl mb-8 flex justify-start">
+            <button
+              onClick={() => nav("/student/landing")}
+              className="px-6 py-2 bg-white/70 backdrop-blur-lg rounded-full text-gray-800 font-semibold hover:bg-white/90 transition-all shadow-md flex items-center gap-2"
+            >
+              ← Back to Learning
+            </button>
+          </div>
+
           {/* TITLE */}
           <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-3">
             Lessons 📘

@@ -2,7 +2,6 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import GlassPage from "../../Components/ui/GlassPage";
-import Navbar from "../../Components/kaveesha/Navbar";
 import PrimaryButton from "../../Components/kaveesha/PrimaryButton";
 import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
@@ -43,7 +42,6 @@ export default function StudentLearningLanding() {
 
   return (
     <GlassPage>
-      <Navbar />
 
       <section className="max-w-6xl mx-auto px-6 py-14">
         <div className="bg-white/50 backdrop-blur-xl rounded-[2.5rem] shadow-glass p-10">

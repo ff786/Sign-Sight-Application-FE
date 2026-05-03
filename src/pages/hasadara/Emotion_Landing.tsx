@@ -1,4 +1,3 @@
-import Navbar from "../../Components/hasadara/Navbar";
 import PrimaryButton from "../../Components/hasadara/PrimaryButton";
 import { useNavigate } from "react-router-dom";
 
@@ -7,7 +6,7 @@ export default function Landing() {
 
   return (
     <div className="min-h-screen bg-yellow-50 overflow-hidden">
-      <Navbar />
+    
 
       <section className="relative max-w-7xl mx-auto px-6 pt-20 pb-28">
         {/* floating decorations */}

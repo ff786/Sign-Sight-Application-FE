@@ -2,7 +2,7 @@ import PrimaryButton from "../../Components/hasadara/PrimaryButton";
 import EmotionTile from "../../Components/hasadara/EmotionTile";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Navbar from "../../Components/hasadara/Navbar";
+
 
 export default function Instructions() {
   const nav = useNavigate();
@@ -10,7 +10,7 @@ export default function Instructions() {
 
   return (
     <div className="h-dvh overflow-hidden bg-yellow-50">
-      <Navbar />
+     
 
       <section className="relative max-w-5xl mx-auto px-4 py-12">
         {/* soft floating glows */}
@@ -50,12 +50,12 @@ export default function Instructions() {
             <EmotionTile
               emoji="😢"
               label="Sad"
-              tone="bg-stone-200"
+              tone="bg-blue-200"
             />
             <EmotionTile
               emoji="😠"
               label="Angry"
-              tone="bg-amber-200"
+              tone="bg-red-200"
             />
           </div>
 

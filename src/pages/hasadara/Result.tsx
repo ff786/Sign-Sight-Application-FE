@@ -1,4 +1,3 @@
-import Navbar from "../../Components/hasadara/Navbar";
 import PrimaryButton from "../../Components/hasadara/PrimaryButton";
 import { useNavigate } from "react-router-dom";
 
@@ -7,8 +6,7 @@ export default function Result() {
 
   return (
     <div className="relative min-h-screen bg-yellow-50 overflow-hidden">
-      <Navbar />
-
+     
       {/* soft background glows */}
       <div className="absolute top-24 left-24 w-72 h-72 bg-yellow-200 rounded-full opacity-50" />
       <div className="absolute bottom-24 right-24 w-80 h-80 bg-amber-200 rounded-full opacity-50" />

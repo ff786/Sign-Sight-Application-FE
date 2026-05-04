@@ -1,5 +1,11 @@
-import React, { useState, useRef } from "react";
-import { SIGN_SIGHT_ML_BASE_URI } from "../../config/CONFIG";
+import React, { useState, useRef, useEffect, useMemo } from "react";
+import {
+    SIGN_LANGUAGE_MODEL_OPTIONS,
+    SIGN_SIGHT_ML_BASE_URI,
+    fetchSignsightMlHealthVariants,
+    type SignLanguageModelValue,
+    type SignsightMlHealthVariantRow,
+} from "../../config/CONFIG";
 
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600&display=swap');
@@ -241,6 +247,13 @@ const STYLES = `
     backdrop-filter: blur(12px);
     box-shadow: 0 4px 24px rgba(107, 76, 47, 0.08);
 }
+.model-picker { margin-bottom: 1rem; }
+.model-picker label { display: block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.45rem; }
+.model-picker select {
+    width: 100%; padding: 12px 14px; border-radius: 12px;
+    border: 1px solid rgba(232, 185, 35, 0.25); background: rgba(255,255,255,0.95);
+    font-family: 'Inter', sans-serif; font-size: 0.9rem; color: var(--color-brown); cursor: pointer;
+}
 
 /* Drop zone */
 .drop-zone {
@@ -391,6 +404,8 @@ const STYLES = `
 `;
 
 const Upload: React.FC = () => {
+    const [modelVariant, setModelVariant] = useState<SignLanguageModelValue>("bilstm");
+    const [mlHealthRows, setMlHealthRows] = useState<SignsightMlHealthVariantRow[] | null>(null);
     const [file, setFile] = useState<File | null>(null);
     const [previewUrl, setPreviewUrl] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
@@ -398,6 +413,26 @@ const Upload: React.FC = () => {
     const [error, setError] = useState<string | null>(null);
     const [dragging, setDragging] = useState(false);
     const fileInputRef = useRef<any>(null);
+    const modelOptionsListed = useMemo(() => {
+        if (mlHealthRows === null) return [...SIGN_LANGUAGE_MODEL_OPTIONS];
+        const ok = new Set(mlHealthRows.filter((r) => r.artifact_paths_ok).map((r) => r.variant));
+        const filt = SIGN_LANGUAGE_MODEL_OPTIONS.filter((o) => ok.has(o.value));
+        return filt.length ? filt : [...SIGN_LANGUAGE_MODEL_OPTIONS];
+    }, [mlHealthRows]);
+
+    useEffect(() => {
+        fetchSignsightMlHealthVariants(SIGN_SIGHT_ML_BASE_URI)
+            .then((rows) => setMlHealthRows(rows))
+            .catch(() => setMlHealthRows(null));
+    }, []);
+
+    useEffect(() => {
+        const allowed = modelOptionsListed.map((o) => o.value);
+        if (!allowed.includes(modelVariant)) {
+            const first = allowed[0] as SignLanguageModelValue | undefined;
+            if (first) setModelVariant(first);
+        }
+    }, [modelOptionsListed, modelVariant]);
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const f = e.target.files?.[0];
@@ -407,12 +442,48 @@ const Upload: React.FC = () => {
     const handleUpload = async () => {
         if (!file) return;
         setLoading(true); setError(null); setResult(null);
-        const formData = new FormData(); formData.append("video", file);
+        const formData = new FormData();
+        formData.append("video", file);
+        formData.append("model_variant", modelVariant);
         try {
-            const response = await fetch(`${SIGN_SIGHT_ML_BASE_URI}/predict_video`, { method: "POST", body: formData });
-            if (!response.ok) { const d = await response.json(); throw new Error(d.error || "Failed to process video"); }
+            const ctrl = new AbortController();
+            const tid = window.setTimeout(() => ctrl.abort(), 180000);
+            const response = await fetch(`${SIGN_SIGHT_ML_BASE_URI}/predict_video`, {
+                method: "POST",
+                body: formData,
+                signal: ctrl.signal,
+            });
+            window.clearTimeout(tid);
+            if (!response.ok) {
+                let msg = `HTTP ${response.status}`;
+                try {
+                    const d = await response.json() as Record<string, unknown>;
+                    msg = typeof d?.error === "string" ? d.error : typeof d?.detail === "object"
+                        ? JSON.stringify(d.detail)
+                        : JSON.stringify(d);
+                } catch { /* non-JSON error body */ }
+                throw new Error(msg);
+            }
             setResult(await response.json());
-        } catch (err: any) { setError(err.message); }
+        } catch (err: unknown) {
+            if (err instanceof DOMException && err.name === "AbortError") {
+                setError(
+                    "Request timed out — the backend may still be loading that model weights (first use can take minutes). Check the Flask terminal, then retry."
+                );
+            } else if (
+                err instanceof TypeError &&
+                typeof (err as Error).message === "string" &&
+                ((err as Error).message.includes("fetch") ||
+                    (err as Error).message.includes("network") ||
+                    (err as Error).message.includes("Failed to fetch"))
+            ) {
+                setError(
+                    `Cannot reach the ML backend at ${SIGN_SIGHT_ML_BASE_URI}. Start jeranapp.py (Flask) and verify CORS / firewall. Also ensure the terminal did not crash while loading GPU weights.`
+                );
+            } else {
+                setError(err instanceof Error ? err.message : "Request failed");
+            }
+        }
         finally { setLoading(false); }
     };
 
@@ -462,6 +533,18 @@ const Upload: React.FC = () => {
                 <div className="up-layout">
                     {/* Upload */}
                     <div className="upload-card">
+                        <div className="model-picker">
+                            <label htmlFor="sign-model-upload">Recognition model</label>
+                            <select
+                                id="sign-model-upload"
+                                value={modelVariant}
+                                onChange={(e) => setModelVariant(e.target.value as SignLanguageModelValue)}
+                            >
+                                {modelOptionsListed.map((o) => (
+                                    <option key={o.value} value={o.value}>{o.label}</option>
+                                ))}
+                            </select>
+                        </div>
                         <div
                             className={`drop-zone ${file ? 'has-file' : ''} ${dragging ? 'dragging' : ''}`}
                             onDragOver={handleDragOver}
@@ -527,6 +610,18 @@ const Upload: React.FC = () => {
                             </div>
 
                             <div className="result-divider"/>
+
+                            {(result?.model_label || result?.model_variant) && (
+                                <>
+                                    <div className="result-item">
+                                        <p className="result-item-label">Model used</p>
+                                        <div className="result-item-value en" style={{ fontSize: '1.1rem' }}>
+                                            {(result.model_label as string)} ({String(result.model_variant)})
+                                        </div>
+                                    </div>
+                                    <div className="result-divider"/>
+                                </>
+                            )}
 
                             <div className="conf-section">
                                 <p className="result-item-label">Confidence Score</p>

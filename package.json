@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently -n fe,ml -c cyan,magenta \"vite\" \"npm run dev:backend\"",
     "dev:fe": "vite",
-    "dev:backend": "cd ../../backend_repo/SignSight-Backend && python jeranapp.py",
+    "dev:backend": "node scripts/run-backend.mjs",
     "dev:stack": "npm run dev",
     "build": "tsc -p tsconfig.app.json && vite build",
     "lint": "eslint .",

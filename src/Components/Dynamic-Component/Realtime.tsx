@@ -1,5 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { SIGN_SIGHT_ML_BASE_URI } from '../../config/CONFIG';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
+import {
+    SIGN_LANGUAGE_MODEL_OPTIONS,
+    SIGN_SIGHT_ML_BASE_URI,
+    fetchSignsightMlHealthVariants,
+    type SignLanguageModelValue,
+    type SignsightMlHealthVariantRow,
+} from '../../config/CONFIG';
 
 const STYLES = `
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Outfit:wght@300;400;500;600;700&display=swap');
@@ -524,6 +530,17 @@ const STYLES = `
     letter-spacing: 0.08em;
 }
 
+.rt-model-picker { margin-bottom: 1.25rem; }
+.rt-model-picker label {
+    display: block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--color-muted); margin-bottom: 0.35rem;
+}
+.rt-model-picker select {
+    width: 100%; padding: 12px 14px; border-radius: 12px;
+    border: 1.5px solid rgba(232, 185, 35, 0.25); background: rgba(255,255,255,0.9);
+    font-family: 'Outfit', sans-serif; font-size: 0.88rem; color: var(--color-text); cursor: pointer;
+}
+
 .main-btn {
     width: 100%;
     padding: 16px;
@@ -914,6 +931,9 @@ const STYLES = `
 `;
 
 const RealTime = () => {
+    const [modelVariant, setModelVariant] = useState<SignLanguageModelValue>('bilstm');
+    const [mlHealthRows, setMlHealthRows] = useState<SignsightMlHealthVariantRow[] | null>(null);
+    const [lastRunModel, setLastRunModel] = useState<{ label: string; variant: string } | null>(null);
     const [isRecording, setIsRecording] = useState(false);
     const [isProcessing, setIsProcessing] = useState(false);
     const [prediction, setPrediction] = useState("Waiting for sign...");
@@ -927,6 +947,26 @@ const RealTime = () => {
     const [detectedSequence, setDetectedSequence] = useState<string[]>([]);
     const [contextSuggestions, setContextSuggestions] = useState<string[]>([]);
     const [selectedContext, setSelectedContext] = useState("general");
+    const modelOptionsListed = useMemo(() => {
+        if (mlHealthRows === null) return [...SIGN_LANGUAGE_MODEL_OPTIONS];
+        const ok = new Set(mlHealthRows.filter((r) => r.artifact_paths_ok).map((r) => r.variant));
+        const filt = SIGN_LANGUAGE_MODEL_OPTIONS.filter((o) => ok.has(o.value));
+        return filt.length ? filt : [...SIGN_LANGUAGE_MODEL_OPTIONS];
+    }, [mlHealthRows]);
+
+    useEffect(() => {
+        fetchSignsightMlHealthVariants(SIGN_SIGHT_ML_BASE_URI)
+            .then((rows) => setMlHealthRows(rows))
+            .catch(() => setMlHealthRows(null));
+    }, []);
+
+    useEffect(() => {
+        const allowed = modelOptionsListed.map((o) => o.value);
+        if (!allowed.includes(modelVariant)) {
+            const first = allowed[0] as SignLanguageModelValue | undefined;
+            if (first) setModelVariant(first);
+        }
+    }, [modelOptionsListed, modelVariant]);
 
     // FIX 1: Explicitly typed refs
     const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -1060,13 +1100,23 @@ const RealTime = () => {
         try {
             const formData = new FormData();
             formData.append("video", blob, "clip.webm");
-            const response = await fetch(`${SIGN_SIGHT_ML_BASE_URI}/predict_video`, {
-                method: "POST",
-                body: formData
-            });
+            formData.append("model_variant", modelVariant);
+            const ctrl = new AbortController();
+            const tid = window.setTimeout(() => ctrl.abort(), 180000);
+            let response!: Response;
+            try {
+                response = await fetch(`${SIGN_SIGHT_ML_BASE_URI}/predict_video`, {
+                    method: "POST",
+                    body: formData,
+                    signal: ctrl.signal,
+                });
+            } finally {
+                window.clearTimeout(tid);
+            }
             if (!response.ok) {
                 setPrediction("Error in detection");
                 setConfidence(0);
+                setLastRunModel(null);
                 setIsProcessing(false);
                 return;
             }
@@ -1077,6 +1127,7 @@ const RealTime = () => {
                 setEnglishSentence("");
                 setTamilSentence("");
                 setConfidence(0);
+                setLastRunModel(null);
             } else {
                 setPrediction(data.action_english || "No sign detected");
                 setTamilPrediction(data.action_tamil || "");
@@ -1085,13 +1136,32 @@ const RealTime = () => {
                 setDetectedSequence(data.detected_sequence || []);
                 setContextSuggestions(data.context_suggestions || []);
                 setConfidence(data.confidence || 0);
+                if (data.model_label || data.model_variant) {
+                    setLastRunModel({
+                        label: String(data.model_label || data.model_variant),
+                        variant: String(data.model_variant || modelVariant),
+                    });
+                }
             }
-        } catch {
-            setPrediction("Connection failed");
+        } catch (e: unknown) {
+            let msg =
+                typeof e === "object" &&
+                e !== null &&
+                "name" in e &&
+                (e as DOMException).name === "AbortError"
+                    ? "Timed out loading model (first inference can take long). Retry; watch Flask logs."
+                    : e instanceof TypeError &&
+                        typeof (e as Error).message === "string" &&
+                        ((e as Error).message.includes("fetch") ||
+                            (e as Error).message.includes("Failed to fetch"))
+                      ? `Failed to fetch ${SIGN_SIGHT_ML_BASE_URI} — Flask down, crashed loading weights, or blocked. Start jeranapp.py and check terminal errors.`
+                      : "Connection failed";
+            setPrediction(msg);
             setTamilPrediction("");
             setEnglishSentence("");
             setTamilSentence("");
             setConfidence(0);
+            setLastRunModel(null);
         } finally {
             setIsProcessing(false);
             setRecordSeconds(0);
@@ -1218,6 +1288,21 @@ const RealTime = () => {
                         {/* Controls */}
                         <div className="ctrl-card">
                             <p className="ctrl-title">Controls</p>
+                            <div className="rt-model-picker">
+                                <label htmlFor="sign-model-rt">Recognition model</label>
+                                <select
+                                    id="sign-model-rt"
+                                    value={modelVariant}
+                                    disabled={isRecording || isProcessing}
+                                    onChange={(e) =>
+                                        setModelVariant(e.target.value as SignLanguageModelValue)
+                                    }
+                                >
+                                    {modelOptionsListed.map((o) => (
+                                        <option key={o.value} value={o.value}>{o.label}</option>
+                                    ))}
+                                </select>
+                            </div>
                             <button
                                 className={`main-btn ${isRecording ? 'stop' : isProcessing ? 'processing' : 'start'}`}
                                 onClick={toggleRecording}
@@ -1250,6 +1335,15 @@ const RealTime = () => {
                                 <>
                                     <p className="output-label">Tamil Meaning</p>
                                     <div className="tamil-sign">{tamilPrediction}</div>
+                                </>
+                            )}
+
+                            {lastRunModel && (
+                                <>
+                                    <p className="output-label" style={{ marginTop: '1rem' }}>Model used</p>
+                                    <div className="detected-sign" style={{ fontSize: 'clamp(1rem, 2.5vw, 1.35rem)' }}>
+                                        {lastRunModel.label} ({lastRunModel.variant})
+                                    </div>
                                 </>
                             )}
 

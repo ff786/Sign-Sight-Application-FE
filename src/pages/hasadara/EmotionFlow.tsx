@@ -89,7 +89,7 @@ export default function EmotionFlow() {
       formData.append("step", step.toString());
       formData.append("video", blob, `emotion_${step}.webm`);
 
-      fetch("http://localhost:5000/upload-emotion-video", {
+      fetch("http://localhost:5080/upload-emotion-video", {
         method: "POST",
         body: formData,
       });

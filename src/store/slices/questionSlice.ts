@@ -53,12 +53,14 @@ const questionSlice = createSlice({
     addAnswerForQuestion: (state, action: PayloadAction<AddAnswerPayload>) => {
       const { level, category, ...answer } = action.payload;
 
-      // prevent duplicates (important!)
+      // Keep one answer per question and allow retakes/changed selections to update it.
       const existing = state.answers[level][category].find(
         (a) => a.question_id === answer.question_id,
       );
 
-      if (!existing) {
+      if (existing) {
+        Object.assign(existing, answer);
+      } else {
         state.answers[level][category].push(answer);
       }
     },

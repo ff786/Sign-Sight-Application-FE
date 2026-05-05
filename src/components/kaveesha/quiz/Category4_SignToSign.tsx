@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
+import { addAnswerForQuestion, useAppDispatch } from "../../../store";
 import YoutubePlayer from "./YoutubePlayer";
 
 export default function Category4_SignToSign({
   question,
-  // level,
-  // category,
+  level,
+  category,
   onNext,
   onVideoRecorded,
 }: any) {
+  const dispatch = useAppDispatch();
   const liveVideoRef = useRef<HTMLVideoElement>(null);
   const recorderRef = useRef<MediaRecorder | null>(null);
   const chunksRef = useRef<Blob[]>([]);
@@ -78,6 +80,16 @@ export default function Category4_SignToSign({
       });
 
       setRecordedUrl(URL.createObjectURL(blob));
+      dispatch(
+        addAnswerForQuestion({
+          question_id: question.id,
+          correct_answer: question.expected_output ?? question.correct_answer ?? "",
+          area: question.area,
+          user_answer: file.name,
+          level,
+          category,
+        }),
+      );
 
       // 🔥 SEND FILE UP TO QuizEngine
       onVideoRecorded(file);

@@ -43,9 +43,13 @@ export function useUserSummary(userId: string | null) {
   const [error, setError] = useState<string | null>(null);
 
   const fetch_ = useCallback(() => {
-    if (!userId) return;
+    if (!userId) {
+      setSummary(null);
+      return;
+    }
     setLoading(true);
     setError(null);
+    setSummary(null);
 
     fetch(`${API}/users/${userId}/summary`)
       .then((r) => {

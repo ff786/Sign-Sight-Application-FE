@@ -14,7 +14,7 @@ import {
   Pie,
 } from "recharts";
 
-import type { UserSummary, Level, Area, Assessment } from "../types";
+import type { UserSummary, Level, Area, Assessment, LevelStats } from "../types";
 import {
   StatCard,
   Card,
@@ -26,6 +26,16 @@ import {
 } from "../components/SharedComponents";
 
 const LEVELS: Level[] = ["basic", "intermediate", "advanced"];
+
+const EMPTY_LEVEL_STATS: LevelStats = {
+  attemptCount: 0,
+  avgScore: 0,
+  bestScore: 0,
+  worstScore: 0,
+  areaAverages: {},
+  assessments: {},
+  videoAttempts: 0,
+};
 
 /* ============================================================
    TOOLTIPS
@@ -80,8 +90,8 @@ function PieTooltip({ active, payload }: any) {
 export default function LevelViewPage({ summary }: { summary: UserSummary }) {
   const [activeLevel, setActiveLevel] = useState<Level>("basic");
 
-  const ls = summary.levelStats[activeLevel];
-  const prog = summary.progress[activeLevel] ?? [];
+  const ls = summary.levelStats?.[activeLevel] ?? EMPTY_LEVEL_STATS;
+  const prog = summary.progress?.[activeLevel] ?? [];
 
   // bar data
   const barData = ALL_AREAS.map((area) => ({
@@ -106,6 +116,8 @@ export default function LevelViewPage({ summary }: { summary: UserSummary }) {
         {LEVELS.map((lvl) => {
           const isActive = activeLevel === lvl;
           const c = LEVEL_COLORS[lvl];
+          const levelAttemptCount =
+            summary.levelStats?.[lvl]?.attemptCount ?? 0;
           return (
             <button
               key={lvl}
@@ -122,9 +134,9 @@ export default function LevelViewPage({ summary }: { summary: UserSummary }) {
               {lvl === "intermediate" && "🟡 "}
               {lvl === "advanced" && "🔴 "}
               {lvl}
-              {ls.attemptCount > 0 && (
+              {levelAttemptCount > 0 && (
                 <span className="opacity-50 ml-1.5 text-sm">
-                  ({ls.attemptCount})
+                  ({levelAttemptCount})
                 </span>
               )}
             </button>

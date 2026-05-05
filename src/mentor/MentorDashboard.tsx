@@ -46,7 +46,13 @@ export default function MentorDashboard() {
 
   const { summary, loading: summaryLoading } = useUserSummary(effectiveUserId);
 
-  const isLoading = usersLoading || summaryLoading || !summary;
+  const needsSummary = activeNav !== "attempts";
+  const summaryUserId = summary?.user?.userId ?? null;
+  const hasSelectedStudentSummary =
+    !!effectiveUserId && summaryUserId === effectiveUserId;
+  const isLoading =
+    usersLoading ||
+    (needsSummary && (summaryLoading || !summary || !hasSelectedStudentSummary));
 
   // --------------------------------------------------------
   return (
@@ -58,9 +64,6 @@ export default function MentorDashboard() {
       <aside className="w-56 bg-gray-800 border-r border-gray-700 flex flex-col shrink-0">
         {/* logo */}
         <div className="p-5 border-b border-gray-700 flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-blue-500 to-teal-500 flex items-center justify-center text-xl">
-            🤚
-          </div>
           <h1 className="text-xl font-semibold tracking-tight">
             Sign<span className="text-teal-400">Sight</span>
           </h1>
@@ -125,6 +128,8 @@ export default function MentorDashboard() {
             <select
               value={effectiveUserId ?? ""}
               onChange={(e) => setSelectedUserId(e.target.value)}
+              aria-label="Select student"
+              title="Select student"
               className="appearance-none bg-gray-800 border border-gray-600 rounded-lg px-3.5 py-2 pr-8 text-sm text-gray-200 cursor-pointer focus:outline-none focus:border-blue-500 transition-colors"
             >
               {users.map((u) => (
@@ -164,7 +169,13 @@ export default function MentorDashboard() {
             {activeNav === "overview" && <OverviewPage summary={summary!} />}
             {activeNav === "level" && <LevelViewPage summary={summary!} />}
             {activeNav === "attempts" && (
-              <AttemptsPage userId={effectiveUserId!} />
+              effectiveUserId ? (
+                <AttemptsPage userId={effectiveUserId} />
+              ) : (
+                <div className="rounded-xl border border-gray-700 bg-gray-800 p-8 text-center text-gray-500">
+                  No students found for this mentor.
+                </div>
+              )
             )}
           </>
         )}
